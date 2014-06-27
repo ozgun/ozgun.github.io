@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Linux.Svn?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:18 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwikica12.html?n=Linux.Svn?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:31 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Linux / Svn</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Linux'>Linux: Svn</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p>SVN(SUBVERSION) KURULUMU ve AYARLARI 
+</p><p class='vspace'></p>
+<p>Kaynaklar: 
+</p><pre>	- <a class='urllink' href='http://www.belgeler.org/howto/svn-nasil.html' rel='nofollow'>http://www.belgeler.org/howto/svn-nasil.html</a>
+	- <a class='urllink' href='http://svnbook.red-bean.com/en/1.1/ch06s03.html' rel='nofollow'>http://svnbook.red-bean.com/en/1.1/ch06s03.html</a>
+	- <a class='urllink' href='http://www.cankavaklioglu.name.tr/svnbaslangic.html' rel='nofollow'>http://www.cankavaklioglu.name.tr/svnbaslangic.html</a>
+</pre><p class='vspace'></p><hr />
+<p>SUNUCU TARAFINDA YAPILAN &#304;&#350;LEMLER
+</p><hr />
+<p class='vspace'></p><p>&gt;&gt; Proje klasörünün SVN'ye uygun hale getirilmesi. Tüm proje 
+</p><pre>	dosyalar&#305; "trunk" klasörü alt&#305;nda olmal&#305;.
+
+	$ cd /home/ozgun/projects
+	$ mkdir prj1 prj2
+	$ mkdir prj1{trunk,branches,tags}
+	$ mkdir prj2{trunk,branches,tags}
+</pre><p class='vspace'></p><p>&gt;&gt; SVN deposu olu&#351;turmak. 
+</p><p class='vspace'></p>
+<pre>	$ svnadmin create --fs-type fsfs /home/ozgun/Repositories
+</pre><p class='vspace'></p><p>&gt;&gt; SVN deposuna projeyi aktarmak.
+</p><p class='vspace'></p>
+<pre>	$ cd /home/ozgun/projects/
+	$ svn import . <a class='urllink' href='file:///home/ozgun/Repositories' rel='nofollow'>file:///home/ozgun/Repositories</a> -m "Projeler"
+</pre><p class='vspace'></p><p>&gt;&gt; Depodaki dosyalar&#305; görmek için:
+</p><p class='vspace'></p>
+<pre>	$ svn list --verbose <a class='urllink' href='file:///home/ozgun/Repositories' rel='nofollow'>file:///home/ozgun/Repositories</a>
+</pre><p class='vspace'></p><p>&gt;&gt; Depodaki dizinler aras&#305;nda gezinme:
+</p><pre>	$ svnshell /home/ozgun/Repositories
+</pre><p class='vspace'></p><p>&gt;&gt; Bu depoya ba&#287;lanabilecek kullan&#305;c&#305;lar&#305; ve okuma-yazma izinlerini belirleyelim.
+</p><p class='vspace'></p>
+<pre>	$ vim /home/ozgun/Repositories/conf/svnserve.conf
+		[general]
+		anon-access = none
+		auth-access = write
+		password-db = passwd
+		realm = Prj Repository
+
+	$ vim /home/ozgun/Repositories/conf/passwd
+		[users]
+		ozgun = sifre
+</pre><p class='vspace'></p><p>&gt;&gt; "svnserve" i "daeomon" modunda, sadece "/home/ozgun/Repositories" 
+</p><pre>	deposunu yay&#305;nlayacak &#351;ekilde ba&#351;latal&#305;m. "svnserver" 3690/tcp ve 3690/upd portlar&#305;n&#305; dinler.
+
+	$ svnserve -d -r /home/ozgun/Repositories
+</pre><p class='vspace'></p><hr />
+<p>&#304;STEMC&#304; TARAFINDA YAPILAN &#304;&#350;LEMLER
+</p><hr />
+<p class='vspace'></p><p>&gt;&gt; &#304;stemci taraf&#305;nda çal&#305;&#351;ma dizini olu&#351;uturulur.
+</p><p class='vspace'></p>
+<pre>	$ mkdir /home/ozgun/Workplace
+	$ cd Workplace
+	$ mkdir prj1
+	$ cd prj1
+</pre><p class='vspace'></p><p>&gt;&gt; SVN sunucusunda projeye ait dosyalar al&#305;n&#305;r.
+</p><p class='vspace'></p>
+<pre>	&gt; Uzaktaki bir makinadan:
+	$ svn checkout svn://192.168.2.77/prj1/trunk
+
+	&gt; svnserve'in kurulu oldu&#287;u makinadan:
+	$ svn checkout <a class='urllink' href='file:///home/ozgun/Repositories/prj1/trunk' rel='nofollow'>file:///home/ozgun/Repositories/prj1/trunk</a>
+</pre>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Linux.Svn</div>
+    <div class='lastmod'>Page last modified on May 02, 2006, at 11:52 PM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Linux.Svn?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwikica12.html?n=Linux.Svn?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:31 GMT -->
+</html>

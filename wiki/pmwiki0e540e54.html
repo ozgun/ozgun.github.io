@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.CodeblocksIterations?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwiki0e54.html?n=Ruby.CodeblocksIterations?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Ruby / CodeblocksIterations</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Ruby'>Ruby: CodeblocksIterations</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p>Code Blocks and Iterations
+<div class='codeblock'><pre>
+#!/usr/bin/ruby
+#
+# code blocks and iterations
+#
+
+#array-each
+[1,2,3,4].each do |x|
+	puts "x: #{x}"
+end
+
+#upto
+1.upto(5) do |x|
+	puts x
+end
+
+#hash-each
+{"a" =&gt; 1, "b" =&gt; 2}.each do |k,v|
+	puts "k: #{k} v: #{v}"
+end
+
+#array-select
+a = [1,2,49,100,111].select { |x| x &lt; 50 } 
+puts a
+
+#blok olu&amp;#351;turulmas&amp;#305;
+block = lambda { |x| puts x }
+block.call "roger that!"
+
+#parametre olarak block kabul eden fonksiyon yaz&amp;#305;lmas&amp;#305;(1)
+#Ruby'de bir methodun blok kabul etmesi için ekstra bi&amp;#351;ey
+#yapmaya gerek yokmu&amp;#351;. Sadece method'da yield'&amp;#305;n olmas&amp;#305; yeterli.
+def call_twice
+	puts "x"
+	yield
+	puts "y"
+	yield
+end
+call_twice { puts "z" }
+
+#parametre olarak block kabul eden fonksiyon yaz&amp;#305;lmas&amp;#305;(2)
+#paramete olarak girilen blo&amp;#287;u n'in de&amp;#287;eri kadar yazar.
+def repeat(n)
+	if block_given?
+		n.times { yield }
+	else
+		raise ArgumentError.new("Blok yoksa, tekrar da yok!")
+	end
+end
+repeat(3) { puts "Repeat after me!" }
+
+#Blo&amp;#287;una arguman gönderen method
+def call_twice2
+	puts "aa"
+	r1 = yield("birinci")
+	puts "r1: #{r1}"
+	puts "bb"
+	r2 = yield("ikinci")
+	puts "r2: #{r2}"
+end
+call_twice2 do |y|
+	puts "block: #{y}"
+	y == "birinci" ? 1 : 2
+end
+
+#E&amp;#287;er method'da yield varsa ve method'a blok gönderilmiyorsa
+#ruby istisna f&amp;#305;rlat&amp;#305;r.
+#[1,2,3].each
+
+#Bir kod blo&amp;#287;unun bir de&amp;#287;i&amp;#351;kenle ba&amp;#287;da&amp;#351;t&amp;#305;r&amp;#305;l&amp;#305;p(bind) 
+#bir method'a parametre olarak göndermek.
+#NOT: Kod blok arguman&amp;#305; son arguman olmal&amp;#305;!
+def repeat2(n, &amp;block)
+	n.times { yield } if block
+	#veya 
+	#n.times { block.call } if block
+end
+repeat2(3) { puts "Copy that!" }
+
+#Blok d&amp;#305;&amp;#351;&amp;#305;nda tan&amp;#305;mlanan de&amp;#287;i&amp;#351;kenlerin blok içinde kullan&amp;#305;lmas&amp;#305;
+var = 3
+position = lambda do 
+	puts "var: #{var}" 
+end
+position.call
+var = 5
+position.call
+
+#Iterasyonun durdurulmas&amp;#305;(break)
+#NOT: Proc.new ile tan&amp;#305;mlanan bir blokta "break" kullan&amp;#305;lamaz,
+#o yüzden blo&amp;#287;u "lambda" ile olu&amp;#351;turmak daha makul olurmu&amp;#351;. 
+3.upto(10) do |x|
+	puts "x: #{x}"
+	break if x == 5
+end
+
+#Kaynaklar:
+#O'Reilly Ruby Cook Book
+</pre></div>
+</p>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Ruby.CodeblocksIterations</div>
+    <div class='lastmod'>Page last modified on December 01, 2006, at 01:43 AM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.CodeblocksIterations?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki0e54.html?n=Ruby.CodeblocksIterations?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>

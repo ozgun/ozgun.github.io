@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.Hashes?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwikibc31.html?n=Ruby.Hashes?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Ruby / Hashes</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Ruby'>Ruby: Hashes</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p><div class='codeblock'><pre>
+#!/usr/bin/ruby
+#
+# Hashes
+#
+
+# hash olu&amp;#351;turulmas&amp;#305;
+h = { "a" =&gt; 1, "b" =&gt; 2 }
+h2 = Hash.new #yeni hash olu&amp;#351;turulur
+h2[:ad] = "Oz" #hash'e de&amp;#287;er atan&amp;#305;r
+h2[:soyad] = "Ko" #hash'e de&amp;#287;er atan&amp;#305;r
+
+#hash'in elemanlar&amp;#305;na ula&amp;#351;&amp;#305;lmas&amp;#305;
+h["a"]
+h["b"]
+
+#hash'e yeni eleman eklenmesi
+h["c"] = 3;
+
+#Like an array, a hash contains references to objects, not copies of them. 
+#Modifications to the original objects will affect all references to them:
+motto = "Don't thread on me"
+flag = { :motto =&gt; motto, :picture =&gt; "picture.png" }
+motto.upcase!
+flag[:motto]
+
+#Hash'lerde key olarak symbol kullan&amp;#305;lmas&amp;#305; önerilir. bu i&amp;#351; 2 yolla yap&amp;#305;labilir.
+#Using symbols instead of strings saves memory and time. 
+#It saves memory because there's only one symbol instance, instead of many string instances. 
+#If you have many hashes that contain the same keys, the memory savings adds up.
+#Using symbols as hash keys is faster because the hash value of a symbol is simply its object ID. 
+#If you use strings in a hash, Ruby must calculate the hash value of a string each time it's used as a hash key.
+h = Hash.new
+h[:name] = "Oz" # veya h['name'.intern] = "Oz";
+
+# Öntan&amp;#305;ml&amp;#305; de&amp;#287;eriyle birlikte hash olu&amp;#351;uturulmas&amp;#305;
+h = Hash.new("default value") 
+h[1] #default value
+h['heyyo'] #default value
+h[:x] #default value
+
+# &amp;#304;ki hash'in birle&amp;#351;tirilmesi
+h1 = { "a"=&gt; 1, "b"=&gt;2 }
+h2 = { "c"=&gt; 3, "d"=&gt;4 }
+h1.merge!(h2)
+
+# Bir hash'in de&amp;#287;erinin ba&amp;#351;ka bir hash ile de&amp;#287;i&amp;#351;tirilmesi
+h1 = { "a"=&gt; 1, "b"=&gt;2 }
+h2 = { "a"=&gt; 3, "b"=&gt;4 }
+h1.replace(h2)
+
+#Hash'ten eleman silinmesi
+h = { 1 =&gt; "aaa" }
+h.delete(1)
+
+#hash'in key'lerine ula&amp;#351;&amp;#305;lmas&amp;#305;
+h = { "a"=&gt; 1, "b"=&gt;2 }
+h.keys
+
+#hash'in value'lerine ula&amp;#351;&amp;#305;lmas&amp;#305;
+h = { "a"=&gt; 1, "b"=&gt;2 }
+h.values
+
+#hash'in eleman say&amp;#305;s&amp;#305;n&amp;#305;n bulunmas&amp;#305;
+h = { "a"=&gt; 1, "b"=&gt;2 }
+h.keys.size
+
+#Hash'in tüm elemanlar&amp;#305;n&amp;#305; silmek için
+h = { "a"=&gt; 1, "b"=&gt;2 }
+h.clear
+
+#Hash'in key,value çiftleri aras&amp;#305;nda gezinme
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.each_pair { |key, value| puts "key: #{key} value: #{value}" }
+
+#Hash'in keyleri aras&amp;#305;nda gezinme
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.each_key { |key| puts key }
+
+#Hash'in value'leri aras&amp;#305;nda gezinme
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.each_value { |val| puts val }
+
+#Hash'in diziye dönü&amp;#351;türülmesi
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.to_a
+
+#Hash'in keylere göre s&amp;#305;ralanmas&amp;#305;
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.keys.sort.each do |x|
+	puts x
+end
+
+#&amp;#304;çiçe hash'lerdeki içteki hash'in de&amp;#287;erlerine ula&amp;#351;&amp;#305;lmas&amp;#305;
+h = Hash.new
+h[:phone] = { :work =&gt; "5555555", :gsm =&gt; "999999999"}
+h[:phone].each_pair do |k,v|
+	puts "#{k} #{v}"
+end
+
+#hash'in keyleri aras&amp;#305;nda arama yapma
+h = { "a"=&gt; 1, "b"=&gt;2, "d" =&gt; 4, "c" =&gt; 3}
+h.keys.grep /[^ab]/
+
+
+# hash'in key'lerine göre s&amp;#305;ralama yapmak.
+h = {"1" =&gt; "bir", "7" =&gt; "yedi", "2" =&gt; "iki"}
+h.keys.sort {|a,b| a.to_i &lt;=&gt; b.to_i}.each do |key|
+puts h[key]
+end
+
+# sadece "sort" kullanarak yapt&amp;#305;&amp;#287;&amp;#305;m&amp;#305;z s&amp;#305;ralama sonunda
+# döndürülen de&amp;#287;er hash yerine bir array'dir.
+h = {:ad =&gt; "Oz", :soyad =&gt; "Ko", :adres =&gt; "Ist"}
+h.sort {|a, b| a.to_s &lt;=&gt; b.to_s} 
+#=&gt;  [[:ad, "Oz"], [:adres, "Istanbul"], [:soyad, "Ko"]]
+
+</pre></div>
+</p>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Ruby.Hashes</div>
+    <div class='lastmod'>Page last modified on May 30, 2008, at 06:40 PM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.Hashes?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwikibc31.html?n=Ruby.Hashes?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>

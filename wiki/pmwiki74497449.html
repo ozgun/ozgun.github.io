@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.FilesAndDirectories?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwiki7449.html?n=Ruby.FilesAndDirectories?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Ruby / FilesAndDirectories</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Ruby'>Ruby: FilesAndDirectories</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p><div class='codeblock'><pre>
+#!/usr/bin/ruby
+#
+# files and directories
+#
+
+#dosyay&amp;#305; yazmak için açmak, dosyan&amp;#305;n içeri&amp;#287;i silinir ve ba&amp;#351;tan itibaren
+#yeniden yaz&amp;#305;l&amp;#305;r.
+open("dosya.txt", "w") do |file|
+	file.write "satir 1\n"
+	file.puts "satir 2"
+end
+
+#mevcut bir dosyay&amp;#305; sat&amp;#305;r sat&amp;#305;r okumak için
+open("dosya.txt") do |file|
+	file.each { |l| puts l }
+end
+
+#Dosyan&amp;#305;n sonuna ekleme yap&amp;#305;lmas&amp;#305;
+open("dosya.txt", "a") do |file|
+	file &lt;&lt; "satir 3\n"
+end
+
+#mevcut bir dosyan&amp;#305;n içeri&amp;#287;ini bir string'e kopyalamak
+str = ""
+open("dosya.txt") do |file|
+	str = file.read
+end
+puts str
+
+#Bir dosyan&amp;#305;n belli bir byte'&amp;#305;n&amp;#305;n okunmas&amp;#305;
+open("dosya.txt") { |f| f.read(5) } #Dosyan&amp;#305;n 5 bayte'&amp;#305; okunur.
+
+#Bir dosyan&amp;#305;n var olup olmad&amp;#305;&amp;#287;&amp;#305;n&amp;#305;n kontrol edilmesi
+#NOT: Sadece dosya kontrolü yapar, klasöler için ba&amp;#351;ka
+#bir yöntem kullan&amp;#305;l&amp;#305;r.
+dosya = "dosya.txt"
+if File.file? dosya
+	puts "dosya.txt bulundu"
+end
+
+#Bir klasörün var olup olmad&amp;#305;&amp;#287;&amp;#305;n kontrol edilmesi
+if File.directory? "prj1"
+	puts "prj1 bulundu"
+end
+
+#Bir dosya veya klasörün var olup olmad&amp;#305;&amp;#287;&amp;#305;n&amp;#305; kontrol edilmesi
+if File.exists? "prj1"
+	puts "prj1 bulundu"
+end
+
+#Bo&amp;#351; bir dosya olu&amp;#351;turulmas&amp;#305;
+require 'fileutils'
+FileUtils.touch("dosya2.txt")
+
+#Bir klasör olu&amp;#351;turulmas&amp;#305;
+if ! File.directory? "klasor1"
+	FileUtils.mkdir("klasor1")
+end
+
+#Bir dosyan&amp;#305;n okunabilir olup olmad&amp;#305;&amp;#287;&amp;#305;n&amp;#305; kontrol edilmesi
+if File.readable? "dosya.txt"
+	puts "dosya.txt okulabilir bir dosya"
+end
+
+#Bir dosyan&amp;#305;n yaz&amp;#305;labilir olup olmad&amp;#305;&amp;#287;&amp;#305;n&amp;#305; kontrol edilmesi
+if File.writable? "dosya.txt"
+	puts "dosya.txt yaz&amp;#305;labilir bir dosya"
+end
+
+#Bir dosyan&amp;#305;n çal&amp;#305;&amp;#351;t&amp;#305;r&amp;#305;labilir olup olmad&amp;#305;&amp;#287;&amp;#305;n&amp;#305; kontrol edilmesi
+if File.executable? "dosya.txt"
+	puts "dosya.txt çal&amp;#305;&amp;#351;t&amp;#305;r&amp;#305;labilir bir dosya"
+end
+
+#Bir dosyan&amp;#305;n izinlerini de&amp;#287;i&amp;#351;tirilmesi
+File.chmod(0664, "dosya.txt")
+
+#Dosya tipinin bulunmas&amp;#305;
+puts File.ftype("dosya.txt")
+
+#Bir dosyan&amp;#305;n boyutu(byte olarak)
+puts File.size("dosya.txt")
+
+#Bir dosyan&amp;#305;n silinmesi
+if File.exists? "dosya.txt"
+	File.delete "dosya.txt"
+end
+
+#Bir klasörün içeri&amp;#287;inin listelenmesi: 1. yöntem
+Dir.entries("/tmp").each { |f| puts f }
+
+#Bir klasörün içeri&amp;#287;inin listelenmesi: 2. yöntem
+dir = Dir.open("/tmp")
+begin
+	dir.each do |f|
+		puts f
+	end	
+ensure
+	dir.close
+end
+
+#Bir klasörün silinmesi
+#NOT: Klasörün içinin bo&amp;#351; olmas&amp;#305; gerekiyor.
+Dir.delete("klasor1") #veya Dir.rmdir("klasor1") veya Dir.unlink("klasor1")
+
+#&amp;#350;u an çal&amp;#305;&amp;#351;&amp;#305;lan klasörün path'ininin bulunmas&amp;#305;
+puts Dir.pwd
+
+#Geçici(tempfile) olu&amp;#351;turulmas&amp;#305;
+require 'tempfile'
+out = Tempfile.new("tempfile")
+puts out.path
+out &lt;&lt; "heyyo"
+out.close
+
+#Geçici dosyan&amp;#305;n&amp;#305; ba&amp;#351;ka bir dosyaya kaydedilmesi
+require 'fileutils'
+FileUtils.mv(out.path, "/tmp/my_tmp_file")
+
+#Bir klasör alt&amp;#305;ndaki tüm dosyalar&amp;#305;n listelenmesi
+#NOT: Recursive çal&amp;#305;&amp;#351;&amp;#305;r
+require 'find'
+Find.find("/tmp") { |path| puts path }
+
+#dosya uzant&amp;#305;s&amp;#305;na göre dosyalar&amp;#305;n bulunmas&amp;#305;
+#.txt dosyalar&amp;#305;n&amp;#305;n bulunmas&amp;#305;
+require 'find'
+Find.find("./") do |p| 
+	ext = p[-4 ... p.size]
+	if ext &amp;&amp; ext.downcase == ".txt"
+		puts "Buldum" + p
+	end
+end
+
+#Ba&amp;#351;ka bir klasöre geçilmesi
+Dir.chdir("/home")
+Dir.entries(".").each { |f| puts f }
+
+#standart girdi'den (ör: klavye'den) girilenlerin 
+#standart ç&amp;#305;kt&amp;#305;ya(ör: ekrana) yaz&amp;#305;lmas&amp;#305;
+$stdin.each { |l| puts l } 
+#veya 
+#$stdin.each { |l| $stdout.puts l }
+
+#Kaynaklar:
+	#O'Reilly Ruby Cookbook
+	#/usr/share/doc/ruby-manual/html/File.html
+	#/usr/share/doc/ruby-manual/html/Dir.html
+	#
+</pre></div>
+</p>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Ruby.FilesAndDirectories</div>
+    <div class='lastmod'>Page last modified on November 29, 2006, at 11:01 PM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.FilesAndDirectories?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki7449.html?n=Ruby.FilesAndDirectories?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>
