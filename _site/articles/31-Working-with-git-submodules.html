@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  
+<!-- Mirrored from kozgun.net/articles/31-Working-with-git-submodules by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:45:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> 
+  <title>Özgün Koyun | Web Application Developer (Ruby on Rails)  | Working with git submodules</title>
+  <meta name="keywords" CONTENT="Ruby on Rails, rails, rails developer, rails freelancer, freelance, freelancer, freelance web developer, freelance developer, ruby on rails freelancer, ruyb on rails developer, freelance rails developer, freelance ruby on rails developer, ruby, linux, Özgün Koyun,Web Application Developer (Ruby on Rails)" />
+  <meta name="description" content="Özgün Koyun | Web Application Developer (Ruby on Rails)" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1254" />
+  <meta name="verify-v1" content="leT01ni2+TeUJnGKdmf+gAojbcnjsnjHUN2Pm9dT0U4=" />
+
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+  <!-- <link rel="icon" type="image/png" href="/images/favicon.png" /> -->
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="alternate" type="application/rss+xml" title="Özgün Koyun | Web Application Developer (Ruby on Rails)" href="http://feeds.feedburner.com/kozgun" />
+
+  <link href="../assets/application-001b5e14c3014b94982609ad2e5bd940.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="../assets/print-3a42b6bd9ad44c4a40c09d762c30d146.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+    <link href="/assets/ie-1c1e8be12931bdbbc85f8d90dacc2f94.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  
+  <script src="../assets/application-dcd61ecae2eb58195d13a51e6128198e.js" type="text/javascript"></script>
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="Rlo0NT4igmuG8cFzBF2ykmylJqC8a6fv42mnkw90FY8=" name="csrf-token" />
+
+  
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head> 
+<body>
+	
+  <div class="container" id="container">
+
+    <!-- top bar begins...  -->
+    <div class="span-24 topBarOuter">
+      <div class="box headerTop">
+        <div class="span-16 headerOuter">
+  <div class="header"><a href="../index.html">Özgün Koyun</a></div>
+  <div class="slogan alt">Web Application Developer (Ruby on Rails)</div>
+</div>
+<hr />
+<div class="menu">
+  <a href="../index.html">Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../projects.html">Projects</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../about.html">About me</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../wiki/index.html">Wiki</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://gist.github.com/ozgun" target="_blank">Gists</a>
+</div>
+
+
+      </div>
+    </div>
+    <!-- top bar end -->
+
+    <!-- latest projects begin --> 
+    <!-- latest projects end -->
+
+    <!-- content(left column) begin  -->
+    <div class="span-16 contentOuter">
+      <div class="content box">
+       
+        <!-- page title -->
+        <div class="pageTitle">
+          
+        </div>
+
+	      <!-- status messages -->
+        
+
+        <!-- content body -->
+        <div class="contentBody">
+              <div>
+  <div class="pageTitle">
+    <h3><a href="31-Working-with-git-submodules.html">Working with git submodules</a></h3>
+  </div>
+  <div class="publishedAt">
+    August 15th, 2011 13:53 &nbsp;&nbsp;|&nbsp;&nbsp; 
+    Category: Linux
+    <span style="float:right"></span> 
+  </div>
+  <br />
+</div>
+<h4>Cloning the main project</h4>
+<pre><code>
+$ cd ~
+$ git clone git@github.com:ozgun/main_project.git
+</code></pre>
+<h4>Initializing the submodule (sub project):</h4>
+<p>Create ~/main_project/.gitmodules file and add the followings lines to it:</p>
+<pre><code>
+[submodule "sub_project"]
+        path = sub_project
+        url = git@github.com:ozgun/sub_project.git
+</pre><p></code></p>
+<p>Run the following commands to initialize the submodule:</p>
+<pre><code>
+$ cd ~/main_project
+$ git submodule init
+$ git submodule update
+</code></pre>
+<p>&#8220;git submodule update&#8221; command does not checkout to &#8220;master&#8221; branch. So we need to create master branch and then switch to it as below:</p>
+<pre><code>
+$ cd ~/main_project/sub_project
+$ git checkout master
+</code></pre>
+<h4>When something changes in sub project</h4>
+<p>Since sub_project is a submodule in main_project, when something changed in submodule, main projects also needs to be notified(synced) about this change.</p>
+<h5>Adding a new file to submodule and pushing to sub_project&#8217;s repository</h5>
+<pre><code>
+$ cd ~/main_project/sub_project
+$ git checkout master # make sure you are working on master branch
+$ touch README
+$ git add README
+$ git commit -am "Added README to sub_project - submodule update"
+$ git push origin master
+</code></pre>
+<h5>Pushing the main_project to remote repository</h5>
+<p>After we updated sub_project, we need to update main_project too.</p>
+<pre><code>
+$ cd ~/main_project
+$ git checkout master
+$ git status
+</code></pre>
+<p>After you run &#8220;git status&#8221; you should see something like this:</p>
+<pre><code>
+# On branch master
+# Changed but not updated:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+#       modified:   sub_project
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+<p>Your main projects understands that something has changed inside the sub_project, so it is considered as &#8220;modified&#8221;. This means that we need to commit and then push to remote git repository as below:</p>
+<pre><code>
+$ cd ~/main_project
+$ git add sub_project # Do not append "/" !
+$ git commit -am "Submodule sub_project updated"
+$ git push origin master
+</code></pre>
+<h4>Resources:</h4>
+<ul>
+	<li><a href="http://longair.net/blog/2010/06/02/git-submodules-explained/">git Submodules Explained</a></li>
+	<li><a href="http://stackoverflow.com/questions/2155887/git-submodule-head">git-submodule-head</a></li>
+	<li><a href="https://git.wiki.kernel.org/index.php/GitSubmoduleTutorial">GitSubmoduleTutorial</a></li>
+	<li><a href="http://pragprog.com/book/pg_git/pragmatic-guide-to-git">Pragmatic Guide to git</a></li>
+</ul>
+
+
+
+            <div class="spacer">&nbsp;</div>
+        </div>
+       
+      </div>
+    </div>
+    <!-- content(left column) end  -->
+
+    <!-- sidebar begin --> 
+    <div class="span-8 last sidebarOuter">
+      <div class="sidebar box">
+        <div class="sidebarModule">
+  <h3>Categories</h3>
+      <a href="../categories/1-Ruby-on-Rails/articles.html">Ruby on Rails</a> <br />
+      <a href="../categories/4-Linux/articles.html">Linux</a> <br />
+      <a href="../categories/3-Ruby/articles.html">Ruby</a> <br />
+      <a href="../categories/5-MySQL/articles.html">MySQL</a> <br />
+      <a href="../categories/6-Life--the-Universe---Everything/articles.html">Life, the Universe &amp; Everything</a> <br />
+</div>
+<br />
+
+<div class="sidebarModule">
+  <h3>Latest Articles</h3>
+        <a href="34-E-devlet-in--turkiye-gov-tr--i-leyi-i.html">E-devlet&#x27;in (turkiye.gov.tr) işleyişi</a> <br />
+        <a href="33-Dynamic--find-by--methods--Rails-2-x-vs-Rails-3-x-.html">Dynamic &quot;find_by&quot; methods (Rails 2.x vs Rails 3.x)</a> <br />
+        <a href="32-undef-method-vs-remove-method.html">undef_method vs remove_method</a> <br />
+        <a href="31-Working-with-git-submodules.html">Working with git submodules</a> <br />
+        <a href="30-Mocking-methods-ending-with-equal-sing-----in--RR--Double-Ruby.html">Mocking methods ending with equal sing (=) in (RR) Double Ruby</a> <br />
+</div>
+<br />
+
+<div class="sidebarModule">
+  <h3><a href="archive.html">Archive</a></h3>
+</div>
+
+<div class="sidebarModule">
+  <h3>Links</h3>
+  <p><a href="http://ruby-lang.org/">Ruby</a>
+<br /><a href="http://rubyonrails.org/">Ruby on Rails</a>
+<br /><a href="http://ubuntu.com/">Ubuntu</a>
+<br /><a href="http://vim.org/">Vim</a>
+<br /><a href="http://enlightenment.org/">Enlightenment</a>
+<br /><a href="http://eterm.org/">Eterm(Try with Escreen)</a></p>
+</div>
+
+
+
+<div class="sidebarModule">
+  <div class="twitter">
+    <!--
+<div id="twitter_div">
+<h3 class="twitter-title">Twitter Updates</h3>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/kozgun.json?callback=twitterCallback2&amp;count=5"></script>
+-->
+  </div>
+</div>
+<br />
+
+  <div class="sidebarModule">
+    <a href="http://workingwithrails.com/recommendation/new/person/7970-ozgun-koyun"><img alt="Recommend Me" src="http://workingwithrails.com/images/tools/compact-small.jpg" /></a>
+  </div>
+  <br />
+
+
+
+  <div class="sidebarModule">
+    <!--
+<a href="http://www.sansursuzinternet.org.tr"><img src="http://www.sansursuzinternet.org.tr/bannerler/125x125-kirmizi.jpg" border="0" alt="" width="125" height="125" /></a>
+<br /><br />
+<a href="http://www.ozguryazilimgunleri.org/2011/" target="_blank"><img src="http://www.ozguryazilimgunleri.org/2011/wp-content/uploads/125125.gif" alt="Özgür Yazılım Günleri 2011" /></a> 
+<br /> <br />
+<a href="http://kozgun.net"><img src="/assets/kozgun.net_qrcode.png" alt="http://kozgun.net" title="http://kozgun.net"></a>
+-->
+<h3>Kitaplar</h3>
+<ul>
+<li>
+<a href="http://www.dikeyeksen.com/collections/programlama/products/ruby">Türkçe Ruby Kitabı</a></li>
+<li>
+<a href="http://www.dikeyeksen.com/products/ruby-on-rails">Türkçe Ruby on Rails Kitabı</a></li>
+</ul>
+  </div>
+  <br />
+
+      </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- tag cloud begin --> 
+    <div class="span-24">
+    </div>
+    <!-- tag cloud end --> 
+
+    <!-- footer begin --> 
+    <div class="span-24">
+      <div class="box footer">
+  <!-- AddThis Button BEGIN -->
+<a href="http://www.addthis.com/bookmark.php" onclick="addthis_url   = location.href; addthis_title = document.title; return addthis_click(this);" target="_blank"><img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16" border="0" alt="Bookmark and Share" /></a> <script type="text/javascript">var addthis_pub = 'kozgun';</script><script type="text/javascript" src="http://s9.addthis.com/js/widget.php?v=10"></script>  
+<!-- AddThis Button END --> <br />
+  <a href="../index.html">Home</a> | 
+  <a href="../projects.html">Projects</a> | 
+  <a href="../about.html">About</a> | 
+  <a href="../contact.html">Contact</a> | 
+  <a href="http://feeds.feedburner.com/kozgun"><img alt="Feed_icon" src="../assets/feed_icon-38654e0375f9a3010d6ffb71e474e679.png" /> RSS</a> <br />
+  <a href="../index.html">kozgun.net</a>
+</div>
+
+    </div>
+    <!-- footer end --> 
+
+</div>
+<!-- container end -->
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-884922-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+</script>
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-2.newrelic.com","a2339804b2","2236130","dVsIEUIMX19VQBpTRkJdBQlVEBxAWF1C",0,22,new Date().getTime(),"","","","",""]);</script></body> 
+
+<!-- Mirrored from kozgun.net/articles/31-Working-with-git-submodules by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:45:29 GMT -->
+</html>

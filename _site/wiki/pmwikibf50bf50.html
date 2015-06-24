@@ -1,0 +1,1793 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:20 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwikibf50.html?n=Vim.Colors?action=diff by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Vim / Colors | History</title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='pub/skins/pmwiki/pmwiki.css' type='text/css' />
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		_uacct = "UA-884922-1";
+		urchinTracker();
+	</script>
+
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+  
+  .diffbox { width:570px; border-left:1px #999999 solid; margin-top:1.33em; }
+  .diffauthor { font-weight:bold; }
+  .diffchangesum { font-weight:bold; }
+  .difftime { font-family:verdana,sans-serif; font-size:66%; 
+    background-color:#dddddd; }
+  .difftype { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; font-weight:bold; }
+  .diffadd { border-left:5px #99ff99 solid; padding-left:5px; }
+  .diffdel { border-left:5px #ffff99 solid; padding-left:5px; }
+  .diffrestore { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; margin:1.5em 0px; }
+  .diffmarkup { font-family:monospace; }  
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='http://kozgun.net/wiki/pmwiki.php'><img src='http://kozgun.net/wiki/pub/skins/pmwiki/sopar100.jpg'
+    alt='Wiki' border='0' /></a></div>
+  <div id='wikihead'>
+	<!-- <span align=center style="position: relative; top:0px; left:-400px;"> -->
+<!-- SiteSearch Google -->
+<!--
+<form method="get" action="http://www.google.com.tr/custom" target="_top">
+<table border="0">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+</td>
+<td nowrap="nowrap">
+<input type="hidden" name="domains" value="linoz.blogspot.com;www.kozgun.net"></input>
+<input type="text" name="q" size="20" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="Search"></input>
+</td></tr>
+<tr>
+<td nowrap="nowrap" colspan=2>
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value="" checked="checked"></input>
+<font size="-1" color="#000000">Web</font>
+<input type="radio" name="sitesearch" value="linoz.blogspot.com"></input>
+<font size="-1" color="#000000">linoz.blogspot.com</font>
+<input type="radio" name="sitesearch" value="www.kozgun.net"></input>
+<font size="-1" color="#000000">www.kozgun.net</font>
+</td>
+  <td></td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-0891912819256381"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-9"></input>
+<input type="hidden" name="oe" value="ISO-8859-9"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+-->
+<!-- SiteSearch Google -->
+	<!-- </span> -->
+
+	<span style="position: relative; top:0px; left:0px;">
+  <form action='http://kozgun.net/wiki/pmwiki.php'>
+    <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.RecentChanges'
+      accesskey='c'>Recent Changes</a> -
+    <input type='hidden' name='n' value='Vim.Colors' />
+    <input type='hidden' name='action' value='search' />
+    <a href='http://kozgun.net/wiki/pmwiki.php?n=Site.Search'>Search</a>:
+    <input class='searchbox' type='text' name='q' value='' />
+    <input class='searchbutton' type='submit' value='Go' /></form></div>
+		</span>
+
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=BirlerVeSifirlar.HomePage'>Birler ve S&#305;f&#305;rlar</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Radio.HomePage'>Radyo</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Bookmarks.Index'>Ba&#287;lant&#305;lar</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=RSS.HomePage'>RSS/Podcasts</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Main.Index'>Site Haritas&#305;</a>
+</li><li><a class='urllink' href='http://linoz.blogspot.com/' rel='nofollow'>linoz.blogspot.com</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=NelerOgrendim.HomePage'>Neler Ö&#287;rendim</a>
+</li></ul><p style='text-align: right;' > <span style='font-size:83%'><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Site.SideBar?action=edit'>edit SideBar</a></span>
+</p>
+
+			<div align="center">
+			<br>
+			<!-- firefox ve thunderbird -->
+			<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=209"><img border="0" alt="Firefox 2" title="Firefox 2" src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox2/firefox-spread-btn-1.png"/></a> 
+			<br>
+<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=181"><img border="0" alt="Get Thunderbird!" title="Get Thunderbird!" src="http://sfx-images.mozilla.org/affiliates/thunderbird/thunderbird_small.png"/></a>
+
+
+<br><br>
+				<script type="text/javascript"><!--
+				/*
+google_ad_client = "pub-0891912819256381";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+*/
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+				</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+        <!-- <div id='wikicmds'><ul><li class='browse' ><a accesskey='ak_view'  class='selflink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors'>View</a>
+</li><li class='edit' ><a accesskey='e'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit'>Edit</a>
+</li><li class='diff' ><a accesskey='h'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff'>History</a>
+</li><li class='print' ><a accesskey='ak_print'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=print'>Print</a>
+</li></ul>
+</div>-->
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim'>Vim</a> /</div>
+          <h1 class='pagetitle'>Colors</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<h2 class='wikiaction'>Vim.Colors History</h2>
+  <p><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff&amp;source=n&amp;minor=n'>Hide minor edits</a> - <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff&amp;source=y&amp;minor=y'>Show changes to markup</a></p>
+  <div id='wikidiff'>
+      <div class='diffbox'><div class='difftime'>April 02, 2008, at 04:33 PM 
+        by <span class='diffauthor' title='78.188.20.61'>78.188.20.61</span></div>
+        <div class='difftype'>Changed line 102 from:</div>
+        <div class='diffdel'><h3>navajo-nights.vim:</h3>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><h3>railscasts.vim</h3>
+</div>
+        <div class='difftype'>Changed lines 104-107 from:</div>
+        <div class='diffdel'><p>" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>" Vim color scheme
+</p>
+</div>
+        <div class='difftype'>Changed lines 106-110 from:</div>
+        <div class='diffdel'><p>" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+</p><p class='vspace'></p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>" Name:         railscast.vim
+" Maintainer:   Josh O'Rourke &lt;jorourke23@gmail.com&gt; 
+" Last Change:  17 Aug 2007 
+" License:      public domain
+" Version:      1.1
+"
+" This theme is based on the Railscasts Textmate theme [1]. I used 
+" Jo Vermeulen's "vibrantink" theme for Vim [2] as my template for 
+" creating this theme.
+"
+" [1] http://railscasts.com/about 
+" [2] http://www.vim.org/scripts/script.php?script_id=1794 
+</p>
+</div>
+        <div class='difftype'>Changed lines 125-226 from:</div>
+        <div class='diffdel'><p>let g:colors_name = "navajo-night"
+</p><p class='vspace'></p>
+<p>" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> -&gt; #ffff74
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> -&gt; #74ffff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> -&gt; #ff9bff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a> -&gt; #ff7474 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> -&gt; #74ff74 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>DarkYellow</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>?</a> -&gt; #7474ff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>DarkGray</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>?</a> -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a> -&gt; #d174a8 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>LightRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>?</a> (assuming #ee9090) -&gt; #116f6f 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> -&gt; #522719 
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=White guifg=White guibg=#35536f
+</p><p class='vspace'></p>
+<p>hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>IncSearch</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=green gui=bold guifg=#d174a8
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>ModeMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>?</a> term=bold cterm=bold gui=bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=darkblue guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=darkmagenta guibg=#124a32
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a> term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+</p><p class='vspace'></p>
+<p>hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+</p><p class='vspace'></p>
+<p>"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: spell check
+" Colour misspelt words
+"hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>let g:colors_name = "railscasts"
+</p><p class='vspace'></p>
+<p>if has("gui_running")
+</p><pre>  hi link htmlTag                     xmlTag
+  hi link htmlTagName                 xmlTagName
+  hi link htmlEndTag                  xmlEndTag
+
+  highlight Normal                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a>   guibg=#2B2B2B
+  highlight Cursor                    guifg=#000000   guibg=#FFFFFF
+  "highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>CursorLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>?</a>               guibg=#323300
+
+  highlight Comment                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BC9458?action=edit'>BC9458</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BC9458?action=edit'>?</a>   gui=italic
+  highlight Constant                  guifg=#6D9CBE
+  highlight Define                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a>
+  highlight Error                     guifg=#FFFFFF   guibg=#990000
+  highlight Function                  guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a>   gui=NONE
+  highlight Identifier                guifg=#6D9CBE   gui=NONE
+  highlight Include                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a>   gui=NONE
+  highlight Keyword                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a>
+  highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a>                    guifg=#2B2B2B   guibg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.C0C0FF?action=edit'>C0C0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.C0C0FF?action=edit'>?</a>
+  highlight Number                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a>
+  highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a>                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a>
+  highlight Search                    guibg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFFF00?action=edit'>FFFF00</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFFF00?action=edit'>?</a>
+  highlight Statement                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a>   gui=NONE
+  highlight String                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a>
+  highlight Title                     guifg=#FFFFFF
+  highlight Type                      guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a>   gui=NONE
+  highlight Visual                    guibg=#5A647E
+
+  highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a>                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a>   guibg=#144212
+  highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a>                guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a>   guibg=#660000
+
+  highlight rubyBlockParameter        guifg=#FFFFFF
+  highlight rubyClass                 guifg=#FFFFFF
+  highlight rubyConstant              guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a>
+  highlight rubyInstanceVariable      guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>D0D0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>?</a>
+  highlight rubyInterpolation         guifg=#519F50
+  highlight rubyLocalVariableOrMethod guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>D0D0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>?</a>
+  highlight rubyPredefinedConstant    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a>
+  highlight rubyPseudoVariable        guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a>
+  highlight rubyStringDelimiter       guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a>
+
+  highlight xmlTag                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a>
+  highlight xmlTagName                guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a>
+  highlight xmlEndTag                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a>
+</pre><p>endif
+</p>
+</div>
+        <div class='difftype'>Changed lines 173-182 from:</div>
+        <div class='diffdel'><h3>morning.vim</h3>
+<p><code>code lang=vim</code> [=
+" Vim color file
+" Maintainer:	Bram Moolenaar &lt;Bram@vim.org&gt;
+" Last Change:	2001 May 21
+</p><p class='vspace'></p>
+<p>" This color scheme uses a light grey background.
+</p><p class='vspace'></p>
+<p>" First remove all existing highlighting.
+set background=light
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><h3>vividchalk.vim</h3>
+<p><code>(:code lang=vim:)</code>[=
+" Vim color scheme
+" Name:         vividchalk.vim
+" Author:       Tim Pope &lt;vimNOSPAM@tpope.info&gt;
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.GetLatestVimScripts?action=edit'>GetLatestVimScripts</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.GetLatestVimScripts?action=edit'>?</a>: 1891 1 :<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.AutoInstall?action=edit'>AutoInstall</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.AutoInstall?action=edit'>?</a>: vividchalk.vim
+" $Id: vividchalk.vim,v 1.8 2007-07-11 18:50:16 tpope Exp $
+</p><p class='vspace'></p>
+<p>" Based on the Vibrank Ink theme for <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TextMate?action=edit'>TextMate</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TextMate?action=edit'>?</a>
+" Distributable under the same terms as Vim itself (see :help license)
+</p><p class='vspace'></p>
+<p>if has("gui_running")
+</p><pre>    set background=dark
+</pre><p>endif
+</p>
+</div>
+        <div class='difftype'>Changed line 190 from:</div>
+        <div class='diffdel'><pre>  syntax reset
+</pre>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><pre>   syntax reset
+</pre>
+</div>
+        <div class='difftype'>Changed lines 193-229 from:</div>
+        <div class='diffdel'><p>let colors_name = "morning"
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=Black ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=Black guibg=grey90
+</p><p class='vspace'></p>
+<p>" Groups used in the 'highlight' and 'guicursor' options default value.
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> ctermfg=White guibg=Red guifg=White
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>IncSearch</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>ModeMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>?</a> term=bold cterm=bold gui=bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=reverse,bold cterm=reverse,bold gui=reverse,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=underline,bold cterm=underline,bold gui=underline,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
+hi Cursor guibg=Green guifg=NONE
+hi lCursor guibg=Cyan guifg=NONE
+hi Directory term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=Brown guifg=Brown
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=Blue gui=bold guifg=Blue guibg=grey80
+hi Question term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Yellow guifg=NONE
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi Title term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> gui=bold guifg=Magenta
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Red
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
+hi Folded term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=Grey guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=Blue ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a> gui=bold guifg=Blue guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>
+</p><p class='vspace'></p>
+<p>" Colors for syntax highlighting
+hi Constant term=underline ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Magenta guibg=grey95
+hi Special term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>SlateBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>?</a> guibg=grey95
+if &amp;t_Co &gt; 8
+</p><pre>  hi Statement term=bold cterm=bold ctermfg=Brown gui=bold guifg=Brown
+</pre>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>let colors_name = "vividchalk"
+</p><p class='vspace'></p>
+<p>" First two functions adapted from inkpot.vim
+</p><p class='vspace'></p>
+<p>" map a urxvt cube number to an xterm-256 cube number
+fun! s:M(a)
+</p><pre>    return strpart("0245", a:a, 1) + 0
+</pre><p>endfun
+</p><p class='vspace'></p>
+<p>" map a urxvt colour to an xterm-256 colour
+fun! s:X(a)
+</p><pre>    if &amp;t_Co == 88
+        return a:a
+    else
+        if a:a == 8
+            return 237
+        elseif a:a &lt; 16
+            return a:a
+        elseif a:a &gt; 79
+            return 232 + (3 * (a:a - 80))
+        else
+            let l:b = a:a - 16
+            let l:x = l:b % 4
+            let l:y = (l:b / 4) % 4
+            let l:z = (l:b / 16)
+            return 16 + s:M(l:x) + (6 * s:M(l:y)) + (36 * s:M(l:z))
+        endif
+    endif
+</pre><p>endfun
+</p><p class='vspace'></p>
+<p>function! <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E2T?action=edit'>E2T</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E2T?action=edit'>?</a>(a)
+</p><pre>    return s:X(a:a)
+</pre><p>endfunction
+</p><p class='vspace'></p>
+<p>function! s:choose(mediocre,good)
+</p><pre>    if &amp;t_Co != 88 &amp;&amp; &amp;t_Co != 256
+        return a:mediocre
+    else
+        return s:X(a:good)
+    endif
+</pre><p>endfunction
+</p><p class='vspace'></p>
+<p>function! s:hifg(group,guifg,first,second,...)
+</p><pre>    if a:0 &amp;&amp; &amp;t_Co == 256
+        let ctermfg = a:1
+    else
+        let ctermfg = s:choose(a:first,a:second)
+    endif
+    exe "highlight ".a:group." guifg=".a:guifg." ctermfg=".ctermfg
+</pre><p>endfunction
+</p><p class='vspace'></p>
+<p>function! s:hibg(group,guibg,first,second)
+</p><pre>    let ctermbg = s:choose(a:first,a:second)
+    exe "highlight ".a:group." guibg=".a:guibg." ctermbg=".ctermbg
+</pre><p>endfunction
+</p><p class='vspace'></p>
+<p>hi link railsMethod         <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a>
+hi link rubyDefine          Keyword
+hi link rubySymbol          Constant
+hi link rubyAccess          rubyMethod
+hi link rubyAttribute       rubyMethod
+hi link rubyEval            rubyMethod
+hi link rubyException       rubyMethod
+hi link rubyInclude         rubyMethod
+hi link rubyStringDelimiter rubyString
+hi link rubyRegexp          Regexp
+hi link rubyRegexpDelimiter rubyRegexp
+"hi link rubyConstant        Variable
+"hi link rubyGlobalVariable  Variable
+"hi link rubyClassVariable   Variable
+"hi link rubyInstanceVariable Variable
+hi link javascriptRegexpString  Regexp
+hi link javascriptNumber        Number
+hi link javascriptNull          Constant
+</p><p class='vspace'></p>
+<p>call s:hifg("Normal","#EEEEEE","White",87)
+if &amp;background == "light" || has("gui_running")
+</p><pre>    hi Normal guibg=Black ctermbg=Black
+</pre><p>else
+</p><pre>    hi Normal guibg=Black ctermbg=NONE
+</pre>
+</div>
+        <div class='difftype'>Added lines 274-527:</div>
+        <div class='diffadd'><p>highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a>    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a>  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
+"if &amp;t_Co == 256
+</p><pre>    "highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> ctermbg=117
+</pre><p>"else
+</p><pre>    "highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> ctermbg=43
+</pre><p>"endif
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a>      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
+highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>CursorLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>?</a>    guibg=#333333 guifg=NONE
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorColumn?action=edit'>CursorColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorColumn?action=edit'>?</a>  guibg=#333333 guifg=NONE
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a>       guifg=#404040 ctermfg=8
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a>    guifg=#404040 ctermfg=8
+highlight Directory     none
+high link Directory     Identifier
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a>      guibg=Red ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=NONE ctermfg=NONE
+highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
+call s:hibg("Search"    ,"#555555","Black",81)
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>IncSearch</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>?</a>     guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a>       guifg=#00AA00 ctermfg=Green
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a>        guifg=#DDEEFF ctermfg=White
+call s:hibg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a>"    ,"#222222","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>",80)
+highlight Question      none
+high link Question      <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a>
+highlight Title         guifg=Magenta ctermfg=Magenta
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a>     gui=none cterm=none
+call s:hibg("Visual"    ,"#555577","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a>",83)
+call s:hibg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a>" ,"#444444","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>",81)
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a>    guifg=Red ctermfg=Red
+highlight Folded        guibg=#1100aa ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+call s:hibg("Folded"    ,"#110077","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>",17)
+call s:hifg("Folded"    ,"#aaddee","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>",63)
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a>    none
+high link <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a>    Folded
+highlight Pmenu         guifg=White ctermfg=White gui=bold cterm=bold
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSel?action=edit'>PmenuSel</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSel?action=edit'>?</a>      guifg=White ctermfg=White gui=bold cterm=bold
+call s:hibg("Pmenu"     ,"#000099","Blue",18)
+call s:hibg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSel?action=edit'>PmenuSel</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSel?action=edit'>?</a>"  ,"#5555ff","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a>",39)
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSbar?action=edit'>PmenuSbar</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuSbar?action=edit'>?</a>     guibg=Grey ctermbg=Grey
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuThumb?action=edit'>PmenuThumb</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PmenuThumb?action=edit'>?</a>    guibg=White ctermbg=White
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>TabLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>?</a>       gui=underline cterm=underline
+call s:hifg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>TabLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>?</a>"   ,"#bbbbbb","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a>",85)
+call s:hibg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>TabLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLine?action=edit'>?</a>"   ,"#333333","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGrey?action=edit'>DarkGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGrey?action=edit'>?</a>",80)
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineSel?action=edit'>TabLineSel</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineSel?action=edit'>?</a>    guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>TabLineFill</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>?</a>   gui=underline cterm=underline
+call s:hifg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>TabLineFill</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>?</a>","#bbbbbb","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a>",85)
+call s:hibg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>TabLineFill</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.TabLineFill?action=edit'>?</a>","#808080","Grey",83)
+</p><p class='vspace'></p>
+<p>hi Type gui=none
+hi Statement gui=none
+if !has("gui_mac")
+</p><pre>    " Mac GUI degrades italics to ugly underlining.
+    hi Comment gui=italic
+    hi railsUserClass  gui=italic
+    hi railsUserMethod gui=italic
+</pre><p>endif
+hi Identifier cterm=none
+" Commented numbers at the end are *old* 256 color values
+"highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a>       guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.EDF8F9?action=edit'>EDF8F9</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.EDF8F9?action=edit'>?</a>
+call s:hifg("Comment"        ,"#9933CC","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a>",34) " 92
+" 26 instead?
+call s:hifg("Constant"       ,"#339999","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a>",21) " 30
+call s:hifg("rubyNumber"     ,"#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CCFF33?action=edit'>CCFF33</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CCFF33?action=edit'>?</a>","Yellow",60) " 190
+call s:hifg("String"         ,"#66FF00","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGreen?action=edit'>LightGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGreen?action=edit'>?</a>",44,82) " 82
+call s:hifg("Identifier"     ,"#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFCC00?action=edit'>FFCC00</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFCC00?action=edit'>?</a>","Yellow",72) " 220
+call s:hifg("Statement"      ,"#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FF6600?action=edit'>FF6600</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FF6600?action=edit'>?</a>","Brown",68) " 202
+call s:hifg("<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a>"        ,"#AAFFFF","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>",47) " 213
+call s:hifg("railsUserMethod","#AACCFF","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>",27)
+call s:hifg("Type"           ,"#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.AAAA77?action=edit'>AAAA77</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.AAAA77?action=edit'>?</a>","Grey",57) " 101
+call s:hifg("railsUserClass" ,"#AAAAAA","Grey",7) " 101
+call s:hifg("Special"        ,"#33AA00","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a>",24) " 7
+call s:hifg("Regexp"         ,"#44B4CC","<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a>",21) " 74
+call s:hifg("rubyMethod"     ,"#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DDE93D?action=edit'>DDE93D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DDE93D?action=edit'>?</a>","Yellow",77) " 191
+"highlight railsMethod   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.EE1122?action=edit'>EE1122</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.EE1122?action=edit'>?</a> ctermfg=1
+=]
+</p><p class='vspace'></p>
+<p class='vspace'></p><h3>navajo-nights.vim:</h3>
+<p><code>(:code lang=vim:)</code>
+" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+
+
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "navajo-night"
+
+" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" DarkBlue -&gt; #ffff74
+" DarkRed -&gt; #74ffff 
+" DarkGreen -&gt; #ff9bff 
+" DarkCyan -&gt; #ff7474 
+" DarkMagenta -&gt; #74ff74 
+" DarkYellow -&gt; #7474ff 
+" DarkGray -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" SeaGreen -&gt; #d174a8 
+" LightRed (assuming #ee9090) -&gt; #116f6f 
+" LightBlue -&gt; #522719 
+
+hi Normal ctermfg=White guifg=White guibg=#35536f
+
+hi SpecialKey term=bold ctermfg=darkblue guifg=Yellow
+hi NonText term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi ErrorMsg term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi IncSearch term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi MoreMsg term=bold ctermfg=green gui=bold guifg=#d174a8
+hi ModeMsg term=bold cterm=bold gui=bold
+hi LineNr term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi StatusLine term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi StatusLineNC term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi VertSplit term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi VisualNOS term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi WarningMsg term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi WildMenu term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi FoldColumn term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi DiffAdd term=bold ctermbg=darkblue guibg=Black
+hi DiffChange term=bold ctermbg=darkmagenta guibg=#124a32
+hi DiffDelete term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi DiffText term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+
+
+" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi PreProc term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+
+hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+
+"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+
+"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+
+"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+
+"+++ Cream: spell check
+" Colour misspelt words
+"hi BadWord ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+
+
+</p><p class='vspace'></p>
+<h3>morning.vim</h3>
+<p><code>(:code lang=vim:)</code> [=
+" Vim color file
+" Maintainer:	Bram Moolenaar &lt;Bram@vim.org&gt;
+" Last Change:	2001 May 21
+</p><p class='vspace'></p>
+<p>" This color scheme uses a light grey background.
+</p><p class='vspace'></p>
+<p>" First remove all existing highlighting.
+set background=light
+hi clear
+if exists("syntax_on")
+</p><pre>  syntax reset
+</pre><p>endif
+</p><p class='vspace'></p>
+<p>let colors_name = "morning"
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=Black ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=Black guibg=grey90
+</p><p class='vspace'></p>
+<p>" Groups used in the 'highlight' and 'guicursor' options default value.
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> ctermfg=White guibg=Red guifg=White
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>IncSearch</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>ModeMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>?</a> term=bold cterm=bold gui=bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=reverse,bold cterm=reverse,bold gui=reverse,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=underline,bold cterm=underline,bold gui=underline,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
+hi Cursor guibg=Green guifg=NONE
+hi lCursor guibg=Cyan guifg=NONE
+hi Directory term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=Brown guifg=Brown
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=Blue gui=bold guifg=Blue guibg=grey80
+hi Question term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Yellow guifg=NONE
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi Title term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> gui=bold guifg=Magenta
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Red
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
+hi Folded term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=Grey guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=Blue ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a> gui=bold guifg=Blue guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>
+</p><p class='vspace'></p>
+<p>" Colors for syntax highlighting
+hi Constant term=underline ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Magenta guibg=grey95
+hi Special term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>SlateBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>?</a> guibg=grey95
+if &amp;t_Co &gt; 8
+</p><pre>  hi Statement term=bold cterm=bold ctermfg=Brown gui=bold guifg=Brown
+</pre><p>endif
+</p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1207143192:1207143030:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>April 02, 2008, at 04:30 PM 
+        by <span class='diffauthor' title='78.188.20.61'>78.188.20.61</span></div>
+        <div class='difftype'>Changed line 1 from:</div>
+        <div class='diffdel'><h3>navajo-nights.vim:</h3>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><h3>railscasts2.vim</h3>
+</div>
+        <div class='difftype'>Changed lines 3-6 from:</div>
+        <div class='diffdel'><p>" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>" Vim color scheme
+</p>
+</div>
+        <div class='difftype'>Changed lines 5-9 from:</div>
+        <div class='diffdel'><p>" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+</p><p class='vspace'></p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>" Name:         railscasts.vim
+" Maintainer:   Nick Moffitt &lt;nick@zork.net&gt;
+" Last Change:  01 Mar 2008
+" License:      WTFPL &lt;http://sam.zoy.org/wtfpl/&gt;
+" Version:      2.1
+"
+" This theme is based on Josh O'Rourke's Vim clone of the railscast
+" textmate theme.  The key thing I have done here is supply 256-color
+" terminal equivalents for as many of the colors as possible, and fixed
+" up some of the funny behaviors for editing e-mails and such.
+"
+" To use for gvim:
+" 1: install this file as ~/.vim/colors/railscasts.vim
+" 2: put "colorscheme railscasts" in your .gvimrc
+"
+" If you are using Ubuntu, you can get the benefit of this in your
+" terminals using ordinary vim by taking the following steps:
+"
+" 1: sudo apt-get install ncurses-term
+" 2: put the following in your .vimrc
+"     if $COLORTERM == 'gnome-terminal'
+"         set term=gnome-256color
+"         colorscheme railscasts
+"     else
+"         colorscheme default
+"     endif
+" 3: if you wish to use this with screen, add the following to your .screenrc:
+"     attrcolor b ".I"
+"     termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+"     defbce "on"
+"     term screen-256color-bce
+</p>
+</div>
+        <div class='difftype'>Added lines 43-119:</div>
+        <div class='diffadd'><p>let g:colors_name = "railscasts"
+</p><p class='vspace'></p>
+<p>hi link htmlTag                     xmlTag
+hi link htmlTagName                 xmlTagName
+hi link htmlEndTag                  xmlEndTag
+</p><p class='vspace'></p>
+<p>highlight Normal                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a> guibg=#111111 
+highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>CursorLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CursorLine?action=edit'>?</a>                guibg=#000000 ctermbg=233 cterm=NONE
+</p><p class='vspace'></p>
+<p>highlight Comment                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BC9458?action=edit'>BC9458</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BC9458?action=edit'>?</a> ctermfg=180 gui=italic
+highlight Constant                  guifg=#6D9CBE ctermfg=73
+highlight Define                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a> ctermfg=173
+highlight Error                     guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a> ctermfg=221 guibg=#990000 ctermbg=88
+highlight Function                  guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a> ctermfg=221 gui=NONE cterm=NONE
+highlight Identifier                guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
+highlight Include                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a> ctermfg=173 gui=NONE cterm=NONE
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreCondit?action=edit'>PreCondit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreCondit?action=edit'>?</a>                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a> ctermfg=173 gui=NONE cterm=NONE
+highlight Keyword                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a> ctermfg=173 cterm=NONE
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a>                    guifg=#2B2B2B ctermfg=159 guibg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.C0C0FF?action=edit'>C0C0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.C0C0FF?action=edit'>?</a>
+highlight Number                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a> ctermfg=107
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a>                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a> ctermfg=103
+highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
+highlight Statement                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>CC7833</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.CC7833?action=edit'>?</a> ctermfg=173 gui=NONE cterm=NONE
+highlight String                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a> ctermfg=107
+highlight Title                     guifg=#FFFFFF ctermfg=15
+highlight Type                      guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a> ctermfg=167 gui=NONE cterm=NONE
+highlight Visual                    guibg=#5A647E ctermbg=60
+</p><p class='vspace'></p>
+<p>highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a>                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a> ctermfg=7 guibg=#519F50 ctermbg=71
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a>                guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>E6E1DC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E6E1DC?action=edit'>?</a> ctermfg=7 guibg=#660000 ctermbg=52
+highlight Special                   guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a> ctermfg=167 
+</p><p class='vspace'></p>
+<p>highlight pythonBuiltin             guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
+highlight rubyBlockParameter        guifg=#FFFFFF ctermfg=15
+highlight rubyClass                 guifg=#FFFFFF ctermfg=15
+highlight rubyConstant              guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a> ctermfg=167
+highlight rubyInstanceVariable      guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>D0D0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>?</a> ctermfg=189
+highlight rubyInterpolation         guifg=#519F50 ctermfg=107
+highlight rubyLocalVariableOrMethod guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>D0D0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>?</a> ctermfg=189
+highlight rubyPredefinedConstant    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>DA4939</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DA4939?action=edit'>?</a> ctermfg=167
+highlight rubyPseudoVariable        guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a> ctermfg=221
+highlight rubyStringDelimiter       guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a> ctermfg=143
+</p><p class='vspace'></p>
+<p>highlight xmlTag                    guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a> ctermfg=179
+highlight xmlTagName                guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a> ctermfg=179
+highlight xmlEndTag                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>E8BF6A</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.E8BF6A?action=edit'>?</a> ctermfg=179
+</p><p class='vspace'></p>
+<p>highlight mailSubject               guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a> ctermfg=107
+highlight mailHeaderKey             guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>FFC66D</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FFC66D?action=edit'>?</a> ctermfg=221
+highlight mailEmail                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>A5C261</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.A5C261?action=edit'>?</a> ctermfg=107 gui=italic cterm=underline
+</p><p class='vspace'></p>
+<p>highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellBad?action=edit'>SpellBad</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellBad?action=edit'>?</a>                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellRare?action=edit'>SpellRare</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellRare?action=edit'>?</a>                 guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D75F87?action=edit'>D75F87</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D75F87?action=edit'>?</a> ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellCap?action=edit'>SpellCap</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpellCap?action=edit'>?</a>                  guifg=#<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>D0D0FF</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.D0D0FF?action=edit'>?</a> ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MatchParen?action=edit'>MatchParen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MatchParen?action=edit'>?</a>                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
+</p><p class='vspace'></p>
+<p>=]
+</p><p class='vspace'></p>
+<h3>navajo-nights.vim:</h3>
+<p><code>(:code lang=vim:)</code>[=
+" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>set background=dark
+hi clear
+if exists("syntax_on")
+</p><pre>  syntax reset
+</pre><p>endif
+</p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1207143030:1121810848:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:07 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Deleted line 1:</div>
+        <div class='diffdel'></div>
+        <div class='difftype'>Deleted line 123:</div>
+        <div class='diffdel'></div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810848:1121810815:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:06 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 127-137 from:</div>
+        <div class='diffdel'><p>" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>set background=dark
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>" Vim color file
+" Maintainer:	Bram Moolenaar &lt;Bram@vim.org&gt;
+" Last Change:	2001 May 21
+</p><p class='vspace'></p>
+<p>" This color scheme uses a light grey background.
+</p><p class='vspace'></p>
+<p>" First remove all existing highlighting.
+set background=light
+</p>
+</div>
+        <div class='difftype'>Changed lines 140-172 from:</div>
+        <div class='diffdel'><p>let g:colors_name = "navajo-night"
+</p><p class='vspace'></p>
+<p>" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> -&gt; #ffff74
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> -&gt; #74ffff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> -&gt; #ff9bff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a> -&gt; #ff7474 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> -&gt; #74ff74 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>DarkYellow</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>?</a> -&gt; #7474ff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>DarkGray</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>?</a> -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a> -&gt; #d174a8 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>LightRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>?</a> (assuming #ee9090) -&gt; #116f6f 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> -&gt; #522719 
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=White guifg=White guibg=#35536f
+</p><p class='vspace'></p>
+<p>hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>let colors_name = "morning"
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=Black ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=Black guibg=grey90
+</p><p class='vspace'></p>
+<p>" Groups used in the 'highlight' and 'guicursor' options default value.
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> ctermfg=White guibg=Red guifg=White
+</p>
+</div>
+        <div class='difftype'>Deleted lines 146-147:</div>
+        <div class='diffdel'><p>hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=green gui=bold guifg=#d174a8
+</p>
+</div>
+        <div class='difftype'>Changed lines 148-212 from:</div>
+        <div class='diffdel'><p>hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=darkblue guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=darkmagenta guibg=#124a32
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a> term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+</p><p class='vspace'></p>
+<p>hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+</p><p class='vspace'></p>
+<p>"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: spell check
+" Colour misspelt words
+"hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=reverse,bold cterm=reverse,bold gui=reverse,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=underline,bold cterm=underline,bold gui=underline,bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
+hi Cursor guibg=Green guifg=NONE
+hi lCursor guibg=Cyan guifg=NONE
+hi Directory term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=Brown guifg=Brown
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=Blue gui=bold guifg=Blue guibg=grey80
+hi Question term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> gui=bold guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a>
+hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Yellow guifg=NONE
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guifg=Blue
+hi Title term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> gui=bold guifg=Magenta
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Red
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
+hi Folded term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermbg=Grey ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> guibg=Grey guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a> guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>LightMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightMagenta?action=edit'>?</a>
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=Blue ctermbg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a> gui=bold guifg=Blue guibg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>LightCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightCyan?action=edit'>?</a>
+</p><p class='vspace'></p>
+<p>" Colors for syntax highlighting
+hi Constant term=underline ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> guifg=Magenta guibg=grey95
+hi Special term=bold ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> guifg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>SlateBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SlateBlue?action=edit'>?</a> guibg=grey95
+if &amp;t_Co &gt; 8
+</p><pre>  hi Statement term=bold cterm=bold ctermfg=Brown gui=bold guifg=Brown
+</pre><p>endif
+hi Ignore ctermfg=<a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>LightGrey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightGrey?action=edit'>?</a> guifg=grey90
+</p><p class='vspace'></p>
+<p>" vim: sw=2
+</p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810815:1121810731:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:05 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 123-124 from:</div>
+        <div class='diffdel'><hr />
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'></div>
+        <div class='difftype'>Deleted lines 244-245:</div>
+        <div class='diffdel'></div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810731:1121810697:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:04 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Added lines 122-247:</div>
+        <div class='diffadd'><p>=]
+</p><hr />
+<p class='vspace'></p><h3>morning.vim</h3>
+<p class='vspace'></p><p><code>(:code lang=vim:)</code> [=
+" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>set background=dark
+hi clear
+if exists("syntax_on")
+</p><pre>  syntax reset
+</pre><p>endif
+</p><p class='vspace'></p>
+<p>let g:colors_name = "navajo-night"
+</p><p class='vspace'></p>
+<p>" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>DarkBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkBlue?action=edit'>?</a> -&gt; #ffff74
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>DarkRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkRed?action=edit'>?</a> -&gt; #74ffff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>DarkGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGreen?action=edit'>?</a> -&gt; #ff9bff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>DarkCyan</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkCyan?action=edit'>?</a> -&gt; #ff7474 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>DarkMagenta</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkMagenta?action=edit'>?</a> -&gt; #74ff74 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>DarkYellow</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkYellow?action=edit'>?</a> -&gt; #7474ff 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>DarkGray</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DarkGray?action=edit'>?</a> -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>SeaGreen</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SeaGreen?action=edit'>?</a> -&gt; #d174a8 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>LightRed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightRed?action=edit'>?</a> (assuming #ee9090) -&gt; #116f6f 
+" <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>LightBlue</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LightBlue?action=edit'>?</a> -&gt; #522719 
+</p><p class='vspace'></p>
+<p>hi Normal ctermfg=White guifg=White guibg=#35536f
+</p><p class='vspace'></p>
+<p>hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>SpecialKey</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.SpecialKey?action=edit'>?</a> term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>NonText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.NonText?action=edit'>?</a> term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>ErrorMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ErrorMsg?action=edit'>?</a> term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>IncSearch</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.IncSearch?action=edit'>?</a> term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>MoreMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.MoreMsg?action=edit'>?</a> term=bold ctermfg=green gui=bold guifg=#d174a8
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>ModeMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.ModeMsg?action=edit'>?</a> term=bold cterm=bold gui=bold
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>LineNr</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.LineNr?action=edit'>?</a> term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>StatusLine</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLine?action=edit'>?</a> term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>StatusLineNC</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.StatusLineNC?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>VertSplit</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VertSplit?action=edit'>?</a> term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>VisualNOS</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.VisualNOS?action=edit'>?</a> term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>WarningMsg</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WarningMsg?action=edit'>?</a> term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>WildMenu</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.WildMenu?action=edit'>?</a> term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>FoldColumn</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.FoldColumn?action=edit'>?</a> term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>DiffAdd</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffAdd?action=edit'>?</a> term=bold ctermbg=darkblue guibg=Black
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>DiffChange</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffChange?action=edit'>?</a> term=bold ctermbg=darkmagenta guibg=#124a32
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>DiffDelete</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffDelete?action=edit'>?</a> term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>DiffText</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.DiffText?action=edit'>?</a> term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+</p><p class='vspace'></p>
+<p class='vspace'></p><p>" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>PreProc</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.PreProc?action=edit'>?</a> term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+</p><p class='vspace'></p>
+<p>hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+</p><p class='vspace'></p>
+<p>"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+</p><p class='vspace'></p>
+<p>"+++ Cream: spell check
+" Colour misspelt words
+"hi <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>BadWord</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=Vim.BadWord?action=edit'>?</a> ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+</p><p class='vspace'></p>
+<p class='vspace'></p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810697:1121810553:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:02 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 1-2 from:</div>
+        <div class='diffdel'><h3>navajo-nights.vim:!!!</h3>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><h3>navajo-nights.vim:</h3>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810553:1121810545:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:02 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 1-2 from:</div>
+        <div class='diffdel'><p>""navajo-nights.vim:""
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><h3>navajo-nights.vim:!!!</h3>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810545:1121810490:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:01 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 1-2 from:</div>
+        <div class='diffdel'><p>navajo-nights.vim: 
+</p>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><p>""navajo-nights.vim:""
+</p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810490:1121810465:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>July 20, 2005, at 01:01 AM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Added lines 1-122:</div>
+        <div class='diffadd'><p>navajo-nights.vim: 
+</p><p class='vspace'></p>
+<p><code>(:code lang=vim:)</code>
+" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+
+
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "navajo-night"
+
+" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" DarkBlue -&gt; #ffff74
+" DarkRed -&gt; #74ffff 
+" DarkGreen -&gt; #ff9bff 
+" DarkCyan -&gt; #ff7474 
+" DarkMagenta -&gt; #74ff74 
+" DarkYellow -&gt; #7474ff 
+" DarkGray -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" SeaGreen -&gt; #d174a8 
+" LightRed (assuming #ee9090) -&gt; #116f6f 
+" LightBlue -&gt; #522719 
+
+hi Normal ctermfg=White guifg=White guibg=#35536f
+
+hi SpecialKey term=bold ctermfg=darkblue guifg=Yellow
+hi NonText term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi ErrorMsg term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi IncSearch term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi MoreMsg term=bold ctermfg=green gui=bold guifg=#d174a8
+hi ModeMsg term=bold cterm=bold gui=bold
+hi LineNr term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi StatusLine term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi StatusLineNC term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi VertSplit term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi VisualNOS term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi WarningMsg term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi WildMenu term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi FoldColumn term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi DiffAdd term=bold ctermbg=darkblue guibg=Black
+hi DiffChange term=bold ctermbg=darkmagenta guibg=#124a32
+hi DiffDelete term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi DiffText term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+
+
+" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi PreProc term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+
+hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+
+"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+
+"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+
+"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+
+"+++ Cream: spell check
+" Colour misspelt words
+"hi BadWord ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+
+
+</p>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit&amp;restore=diff:1121810465:1121810465:&amp;preview=y'>Restore</a></div></div></div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=edit'>Edit</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff'>History</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=print' target='_blank'>Print</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Vim.RecentChanges'>Recent Changes</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Site.Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on April 02, 2008, at 04:33 PM</div></div>
+<!--/PageFooterFmt-->
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=diff by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwikibf50.html?n=Vim.Colors?action=diff by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>

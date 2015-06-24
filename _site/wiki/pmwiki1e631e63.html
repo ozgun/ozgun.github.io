@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.Arrays?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwiki1e63.html?n=Ruby.Arrays?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Ruby / Arrays</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Ruby'>Ruby: Arrays</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<p><div class='codeblock'><pre>
+#!/usr/bin/ruby
+#
+#Arrays 
+#
+
+#Dizi olu&amp;#351;turulmas&amp;#305;
+a1 = [1, 'oz', 4, '000', 33, 55]
+a2 = [3, [22, 33, 44], 42, 99] 
+
+# sadece stringlerden olu&amp;#351;an bir dizi ise %w kullan&amp;#305;labilir.
+a1 = %w{1 x oz}
+
+# %q ile dizi olu&amp;#351;turulmas&amp;#305;
+a1 = %q{devel 
+ruby workspace 
+heyyo}
+
+# Dizinin uzunlu&amp;#287;u
+a1.size
+a1.length
+
+#Dizinin sonuna eleman eklenmesi
+a1 &lt;&lt; 4
+
+#Dizinin belli eleman&amp;#305;na eri&amp;#351;im
+a1.at(0)
+a1[0]
+a1[2]
+a1[-1]
+a2[1][0]
+a1[2..4] #2. indisten ba&amp;#351;lay&amp;#305;p(2 dahil) 4. indise kadar(4 dahil)
+a1[2..-2]
+a1.values_at(0, 2, 3) #0, 2 ve 3. indisli elemanlar
+
+#Iterasyon
+a1.each {|x| puts x}
+
+#Collect
+a3 = [1, 2, 3, 4]
+a3.collect {|x| x ** 2}
+
+#each_with_index: Dizinin index ve value de&amp;#287;erleri.
+['a', 'b', 'c'].each_with_index do |item, index|
+	puts "index: #{index}, item: #{item}"
+end
+
+#reverse_each: Diziyi tersten yazd&amp;#305;r&amp;#305;r.
+[1, 2, 3].reverse_each {|x| puts x}
+
+#Dizideki elemanlar üzerinde i&amp;#351;lem yapmak(collect!, map!)
+a4 = ['a', 'b', 'c']
+a4.collect! {|x| x.upcase}
+a4.map! {|x| x.downcase}
+
+#Dizinin belli bir indexinden belli bir indexine kadar olan elemanlar&amp;#305;na eri&amp;#351;mek(upto)
+2.upto(a4.length-1) {|i| puts "index: #{i} value: #{a4[i]}" }
+
+#step
+a = ['1', 'a', '2', 'b', '3', 'c']
+(0 .. a.length-1).step(2) do |i|
+	puts "i: #{i} value: #{a[i]}"
+end
+
+#for in
+a = [1, 2, 3, 4]
+for x in (0 .. a.length-1) 
+	puts x
+end
+for y in [1, 2, 3, 4]
+	puts y
+end
+
+#dizideki elemanlar&amp;#305; de&amp;#287;i&amp;#351;kenlere ya da ba&amp;#351;ka dizilere atamak.
+a = [2, 4, 6]
+x, y, z = a;
+x1, *x2 = a; #x2 = [4,6] olur.
+
+#Dizideki mükerrer kay&amp;#305;tlar&amp;#305;n ç&amp;#305;kar&amp;#305;lmas&amp;#305;
+a = [1,2,3,3,3,4,5,5]
+a.uniq!
+
+#E&amp;#287;er diziye birden fazla ayn&amp;#305; kayd&amp;#305;n girmesini istemiyorsak "set" kullan&amp;#305;r&amp;#305;z.
+#NOT: set olunca s&amp;#305;ras&amp;#305; bozulur dizinin.
+require 'set'
+a = [1,2,3,3,3,4,5,5]
+b = a.to_set
+b &lt;&lt; 1 # set'te var olan de&amp;#287;eri eklersek set'e eklenmez.
+
+#Dizideki "nil"lerin ç&amp;#305;kar&amp;#305;lmas&amp;#305;(compact)
+a = [1, 2, nil, nil, 3]
+a.compact
+a.compact!
+
+#Dizideki belli bir eleman&amp;#305;n silinmesi
+a = [11, 22, 33]
+a.delete(11);
+
+#Dizinin ters çevirilmesi
+a = [1, 2, 3]
+a.reverse
+a.reverse!
+
+#Dizideki elemanlar&amp;#305;n s&amp;#305;ralanmas&amp;#305;
+a = [12, 2, -4, 33]
+a.sort
+a.sort!
+a = ['oz', 'OS', 'ko', 'CO'] #Normalda önce büyük harfler gelir.
+a.sort
+a.sort_by {|x| x.downcase}  #Büyük küçük harf duyars&amp;#305;z s&amp;#305;ralama yapar.
+
+#dizideki elemanlar&amp;#305;n toplanmas&amp;#305;(1. yöntem)
+a = [1, 2, 3, 4, 5]
+sum = 0
+a.each {|x| sum += x}
+
+#dizideki elemanlar&amp;#305;n toplanmas&amp;#305;(2. yöntem: inject)
+#NOT: sum2 10 olarak hesaplan&amp;#305;yor! 
+a = [1, 2, 3, 4, 5]
+sum2 = 0
+a.inject(0) {|sum2, x| sum2 + x}
+puts sum2
+
+#dizinin kar&amp;#305;&amp;#351;t&amp;#305;r&amp;#305;lmas&amp;#305;, shuffle
+a = [1, 2, 3, 4, 5]
+a.sort_by { rand }
+
+#Dizideki min,max eleman&amp;#305;n bulunmas&amp;#305;
+a = [1, 2, 3, 4, 5]
+a.min
+a.max
+
+#dizideki belli bir aral&amp;#305;&amp;#287;&amp;#305;n ç&amp;#305;kar&amp;#305;lmas&amp;#305;
+a = ("a".."h").to_a
+a.slice!(1..3) #1. indisten 3. indise kadar ç&amp;#305;kar(1 ve 3 dahil)
+a.slice!(1) #1.indisli eleman&amp;#305; ç&amp;#305;kar.
+a.slice!(2,3) #2. indisten sonraki 3 eleman&amp;#305; ç&amp;#305;kar.(2 dahil)
+
+#Dizide belli kriterlere uyan elemanlar&amp;#305;n bulunmas&amp;#305;
+a = ("a".."h").to_a
+a.find_all { |x| x &lt; "e" }
+a.reject { |x| x &lt; "e" }
+
+#Düzenli ifadeler ile dizideki elemanlara arama yap&amp;#305;lmas&amp;#305;
+a = ("a".."h").to_a
+a.grep /[abcx]/
+a.grep /[^g]/ #içinde g harfi olmayanlar&amp;#305;n bulunmas&amp;#305;
+
+#Dizilerde küme i&amp;#351;lemler
+a = [1, 2, 3]
+b = [3, 4, 5]
+a | b #[1, 2, 3, 4, 5]
+a &amp; b #[3]
+a - b #[1,2]
+
+</pre></div>
+</p>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Ruby.Arrays</div>
+    <div class='lastmod'>Page last modified on November 29, 2006, at 10:59 PM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Ruby.Arrays?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki1e63.html?n=Ruby.Arrays?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>

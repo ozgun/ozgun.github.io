@@ -1,0 +1,607 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+    "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:20 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwiki2738.html?n=Vim.Colors?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | Vim / Colors</title>
+  <link rel='stylesheet' href='pub/skins/print/print.css' type='text/css' />
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+  <div id='printhead'>
+    <h3>From Wiki</h3>
+    <h1 class='pagename'><a href='http://kozgun.net/wiki/pmwiki.php?n=Vim'>Vim: Colors</a></h1>
+  </div>
+<!--PageText-->
+<div id='wikitext'>
+<h3>railscasts2.vim</h3>
+<p><div class='codeblock'><pre>
+" Vim color scheme
+"
+" Name:         railscasts.vim
+" Maintainer:   Nick Moffitt &lt;nick@zork.net&gt;
+" Last Change:  01 Mar 2008
+" License:      WTFPL &lt;http://sam.zoy.org/wtfpl/&gt;
+" Version:      2.1
+"
+" This theme is based on Josh O'Rourke's Vim clone of the railscast
+" textmate theme.  The key thing I have done here is supply 256-color
+" terminal equivalents for as many of the colors as possible, and fixed
+" up some of the funny behaviors for editing e-mails and such.
+"
+" To use for gvim:
+" 1: install this file as ~/.vim/colors/railscasts.vim
+" 2: put "colorscheme railscasts" in your .gvimrc
+"
+" If you are using Ubuntu, you can get the benefit of this in your
+" terminals using ordinary vim by taking the following steps:
+"
+" 1: sudo apt-get install ncurses-term
+" 2: put the following in your .vimrc
+"     if $COLORTERM == 'gnome-terminal'
+"         set term=gnome-256color
+"         colorscheme railscasts
+"     else
+"         colorscheme default
+"     endif
+" 3: if you wish to use this with screen, add the following to your .screenrc:
+"     attrcolor b ".I"
+"     termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+"     defbce "on"
+"     term screen-256color-bce
+
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "railscasts"
+
+hi link htmlTag                     xmlTag
+hi link htmlTagName                 xmlTagName
+hi link htmlEndTag                  xmlEndTag
+
+highlight Normal                    guifg=#E6E1DC guibg=#111111 
+highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15	
+highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
+
+highlight Comment                   guifg=#BC9458 ctermfg=180 gui=italic
+highlight Constant                  guifg=#6D9CBE ctermfg=73
+highlight Define                    guifg=#CC7833 ctermfg=173
+highlight Error                     guifg=#FFC66D ctermfg=221 guibg=#990000 ctermbg=88
+highlight Function                  guifg=#FFC66D ctermfg=221 gui=NONE cterm=NONE
+highlight Identifier                guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
+highlight Include                   guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+highlight PreCondit                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+highlight Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
+highlight LineNr                    guifg=#2B2B2B ctermfg=159 guibg=#C0C0FF
+highlight Number                    guifg=#A5C261 ctermfg=107
+highlight PreProc                   guifg=#E6E1DC ctermfg=103
+highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
+highlight Statement                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+highlight String                    guifg=#A5C261 ctermfg=107
+highlight Title                     guifg=#FFFFFF ctermfg=15
+highlight Type                      guifg=#DA4939 ctermfg=167 gui=NONE cterm=NONE
+highlight Visual                    guibg=#5A647E ctermbg=60
+
+highlight DiffAdd                   guifg=#E6E1DC ctermfg=7 guibg=#519F50 ctermbg=71
+highlight DiffDelete                guifg=#E6E1DC ctermfg=7 guibg=#660000 ctermbg=52
+highlight Special                   guifg=#DA4939 ctermfg=167 
+
+highlight pythonBuiltin             guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
+highlight rubyBlockParameter        guifg=#FFFFFF ctermfg=15
+highlight rubyClass                 guifg=#FFFFFF ctermfg=15
+highlight rubyConstant              guifg=#DA4939 ctermfg=167
+highlight rubyInstanceVariable      guifg=#D0D0FF ctermfg=189
+highlight rubyInterpolation         guifg=#519F50 ctermfg=107
+highlight rubyLocalVariableOrMethod guifg=#D0D0FF ctermfg=189
+highlight rubyPredefinedConstant    guifg=#DA4939 ctermfg=167
+highlight rubyPseudoVariable        guifg=#FFC66D ctermfg=221
+highlight rubyStringDelimiter       guifg=#A5C261 ctermfg=143
+
+highlight xmlTag                    guifg=#E8BF6A ctermfg=179
+highlight xmlTagName                guifg=#E8BF6A ctermfg=179
+highlight xmlEndTag                 guifg=#E8BF6A ctermfg=179
+
+highlight mailSubject               guifg=#A5C261 ctermfg=107
+highlight mailHeaderKey             guifg=#FFC66D ctermfg=221
+highlight mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
+
+highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
+highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
+highlight SpellCap                  guifg=#D0D0FF ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
+highlight MatchParen                guifg=#FFFFFF ctermfg=15 guibg=#005f5f ctermbg=23
+
+</pre></div>
+</p><p class='vspace'></p>
+<h3>railscasts.vim</h3>
+<p><div class='codeblock'><pre>
+" Vim color scheme
+"
+" Name:         railscast.vim
+" Maintainer:   Josh O'Rourke &lt;jorourke23@gmail.com&gt; 
+" Last Change:  17 Aug 2007 
+" License:      public domain
+" Version:      1.1
+"
+" This theme is based on the Railscasts Textmate theme [1]. I used 
+" Jo Vermeulen's "vibrantink" theme for Vim [2] as my template for 
+" creating this theme.
+"
+" [1] http://railscasts.com/about 
+" [2] http://www.vim.org/scripts/script.php?script_id=1794 
+
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "railscasts"
+
+if has("gui_running")
+  hi link htmlTag                     xmlTag
+  hi link htmlTagName                 xmlTagName
+  hi link htmlEndTag                  xmlEndTag
+
+  highlight Normal                    guifg=#E6E1DC   guibg=#2B2B2B
+  highlight Cursor                    guifg=#000000   guibg=#FFFFFF
+  "highlight CursorLine               guibg=#323300
+
+  highlight Comment                   guifg=#BC9458   gui=italic
+  highlight Constant                  guifg=#6D9CBE
+  highlight Define                    guifg=#CC7833
+  highlight Error                     guifg=#FFFFFF   guibg=#990000
+  highlight Function                  guifg=#FFC66D   gui=NONE
+  highlight Identifier                guifg=#6D9CBE   gui=NONE
+  highlight Include                   guifg=#CC7833   gui=NONE
+  highlight Keyword                   guifg=#CC7833
+  highlight LineNr                    guifg=#2B2B2B   guibg=#C0C0FF
+  highlight Number                    guifg=#A5C261
+  highlight PreProc                   guifg=#E6E1DC
+  highlight Search                    guibg=#FFFF00
+  highlight Statement                 guifg=#CC7833   gui=NONE
+  highlight String                    guifg=#A5C261
+  highlight Title                     guifg=#FFFFFF
+  highlight Type                      guifg=#DA4939   gui=NONE
+  highlight Visual                    guibg=#5A647E
+
+  highlight DiffAdd                   guifg=#E6E1DC   guibg=#144212
+  highlight DiffDelete                guifg=#E6E1DC   guibg=#660000
+
+  highlight rubyBlockParameter        guifg=#FFFFFF
+  highlight rubyClass                 guifg=#FFFFFF
+  highlight rubyConstant              guifg=#DA4939
+  highlight rubyInstanceVariable      guifg=#D0D0FF
+  highlight rubyInterpolation         guifg=#519F50
+  highlight rubyLocalVariableOrMethod guifg=#D0D0FF
+  highlight rubyPredefinedConstant    guifg=#DA4939
+  highlight rubyPseudoVariable        guifg=#FFC66D
+  highlight rubyStringDelimiter       guifg=#A5C261
+
+  highlight xmlTag                    guifg=#E8BF6A
+  highlight xmlTagName                guifg=#E8BF6A
+  highlight xmlEndTag                 guifg=#E8BF6A
+endif
+</pre></div>
+</p><p class='vspace'></p>
+<p class='vspace'></p><h3>vividchalk.vim</h3>
+<p><div class='codeblock'><pre>
+" Vim color scheme
+" Name:         vividchalk.vim
+" Author:       Tim Pope &lt;vimNOSPAM@tpope.info&gt;
+" GetLatestVimScripts: 1891 1 :AutoInstall: vividchalk.vim
+" $Id: vividchalk.vim,v 1.8 2007-07-11 18:50:16 tpope Exp $
+
+" Based on the Vibrank Ink theme for TextMate
+" Distributable under the same terms as Vim itself (see :help license)
+
+if has("gui_running")
+    set background=dark
+endif
+hi clear
+if exists("syntax_on")
+   syntax reset
+endif
+
+let colors_name = "vividchalk"
+
+" First two functions adapted from inkpot.vim
+
+" map a urxvt cube number to an xterm-256 cube number
+fun! s:M(a)
+    return strpart("0245", a:a, 1) + 0
+endfun
+
+" map a urxvt colour to an xterm-256 colour
+fun! s:X(a)
+    if &amp;t_Co == 88
+        return a:a
+    else
+        if a:a == 8
+            return 237
+        elseif a:a &lt; 16
+            return a:a
+        elseif a:a &gt; 79
+            return 232 + (3 * (a:a - 80))
+        else
+            let l:b = a:a - 16
+            let l:x = l:b % 4
+            let l:y = (l:b / 4) % 4
+            let l:z = (l:b / 16)
+            return 16 + s:M(l:x) + (6 * s:M(l:y)) + (36 * s:M(l:z))
+        endif
+    endif
+endfun
+
+function! E2T(a)
+    return s:X(a:a)
+endfunction
+
+function! s:choose(mediocre,good)
+    if &amp;t_Co != 88 &amp;&amp; &amp;t_Co != 256
+        return a:mediocre
+    else
+        return s:X(a:good)
+    endif
+endfunction
+
+function! s:hifg(group,guifg,first,second,...)
+    if a:0 &amp;&amp; &amp;t_Co == 256
+        let ctermfg = a:1
+    else
+        let ctermfg = s:choose(a:first,a:second)
+    endif
+    exe "highlight ".a:group." guifg=".a:guifg." ctermfg=".ctermfg
+endfunction
+
+function! s:hibg(group,guibg,first,second)
+    let ctermbg = s:choose(a:first,a:second)
+    exe "highlight ".a:group." guibg=".a:guibg." ctermbg=".ctermbg
+endfunction
+
+hi link railsMethod         PreProc
+hi link rubyDefine          Keyword
+hi link rubySymbol          Constant
+hi link rubyAccess          rubyMethod
+hi link rubyAttribute       rubyMethod
+hi link rubyEval            rubyMethod
+hi link rubyException       rubyMethod
+hi link rubyInclude         rubyMethod
+hi link rubyStringDelimiter rubyString
+hi link rubyRegexp          Regexp
+hi link rubyRegexpDelimiter rubyRegexp
+"hi link rubyConstant        Variable
+"hi link rubyGlobalVariable  Variable
+"hi link rubyClassVariable   Variable
+"hi link rubyInstanceVariable Variable
+hi link javascriptRegexpString  Regexp
+hi link javascriptNumber        Number
+hi link javascriptNull          Constant
+
+call s:hifg("Normal","#EEEEEE","White",87)
+if &amp;background == "light" || has("gui_running")
+    hi Normal guibg=Black ctermbg=Black
+else
+    hi Normal guibg=Black ctermbg=NONE
+endif
+highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
+highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
+"if &amp;t_Co == 256
+    "highlight StatusLine ctermbg=117
+"else
+    "highlight StatusLine ctermbg=43
+"endif
+highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
+highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
+highlight CursorLine    guibg=#333333 guifg=NONE
+highlight CursorColumn  guibg=#333333 guifg=NONE
+highlight NonText       guifg=#404040 ctermfg=8
+highlight SpecialKey    guifg=#404040 ctermfg=8
+highlight Directory     none
+high link Directory     Identifier
+highlight ErrorMsg      guibg=Red ctermbg=DarkRed guifg=NONE ctermfg=NONE
+highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
+call s:hibg("Search"    ,"#555555","Black",81)
+highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight MoreMsg       guifg=#00AA00 ctermfg=Green
+highlight LineNr        guifg=#DDEEFF ctermfg=White
+call s:hibg("LineNr"    ,"#222222","DarkBlue",80)
+highlight Question      none
+high link Question      MoreMsg
+highlight Title         guifg=Magenta ctermfg=Magenta
+highlight VisualNOS     gui=none cterm=none
+call s:hibg("Visual"    ,"#555577","LightBlue",83)
+call s:hibg("VisualNOS" ,"#444444","DarkBlue",81)
+highlight WarningMsg    guifg=Red ctermfg=Red
+highlight Folded        guibg=#1100aa ctermbg=DarkBlue
+call s:hibg("Folded"    ,"#110077","DarkBlue",17)
+call s:hifg("Folded"    ,"#aaddee","LightCyan",63)
+highlight FoldColumn    none
+high link FoldColumn    Folded
+highlight Pmenu         guifg=White ctermfg=White gui=bold cterm=bold
+highlight PmenuSel      guifg=White ctermfg=White gui=bold cterm=bold
+call s:hibg("Pmenu"     ,"#000099","Blue",18)
+call s:hibg("PmenuSel"  ,"#5555ff","DarkCyan",39)
+highlight PmenuSbar     guibg=Grey ctermbg=Grey
+highlight PmenuThumb    guibg=White ctermbg=White
+highlight TabLine       gui=underline cterm=underline
+call s:hifg("TabLine"   ,"#bbbbbb","LightGrey",85)
+call s:hibg("TabLine"   ,"#333333","DarkGrey",80)
+highlight TabLineSel    guifg=White guibg=Black ctermfg=White ctermbg=Black
+highlight TabLineFill   gui=underline cterm=underline
+call s:hifg("TabLineFill","#bbbbbb","LightGrey",85)
+call s:hibg("TabLineFill","#808080","Grey",83)
+
+hi Type gui=none
+hi Statement gui=none
+if !has("gui_mac")
+    " Mac GUI degrades italics to ugly underlining.
+    hi Comment gui=italic
+    hi railsUserClass  gui=italic
+    hi railsUserMethod gui=italic
+endif
+hi Identifier cterm=none
+" Commented numbers at the end are *old* 256 color values
+"highlight PreProc       guifg=#EDF8F9
+call s:hifg("Comment"        ,"#9933CC","DarkMagenta",34) " 92
+" 26 instead?
+call s:hifg("Constant"       ,"#339999","DarkCyan",21) " 30
+call s:hifg("rubyNumber"     ,"#CCFF33","Yellow",60) " 190
+call s:hifg("String"         ,"#66FF00","LightGreen",44,82) " 82
+call s:hifg("Identifier"     ,"#FFCC00","Yellow",72) " 220
+call s:hifg("Statement"      ,"#FF6600","Brown",68) " 202
+call s:hifg("PreProc"        ,"#AAFFFF","LightCyan",47) " 213
+call s:hifg("railsUserMethod","#AACCFF","LightCyan",27)
+call s:hifg("Type"           ,"#AAAA77","Grey",57) " 101
+call s:hifg("railsUserClass" ,"#AAAAAA","Grey",7) " 101
+call s:hifg("Special"        ,"#33AA00","DarkGreen",24) " 7
+call s:hifg("Regexp"         ,"#44B4CC","DarkCyan",21) " 74
+call s:hifg("rubyMethod"     ,"#DDE93D","Yellow",77) " 191
+"highlight railsMethod   guifg=#EE1122 ctermfg=1
+</pre></div>
+</p><p class='vspace'></p>
+<p class='vspace'></p><h3>navajo-nights.vim:</h3>
+<p><div class='codeblock'><pre>
+" Vim colour file
+" Maintainer: Matthew Hawkins &lt;matt@mh.dropbear.id.au&gt;
+" Last Change:	Mon, 22 Apr 2002 15:28:04 +1000
+" URI: http://mh.dropbear.id.au/vim/navajo-night.png
+"
+" This colour scheme uses a "navajo-black" background
+" I have added colours for the statusbar and for spell checking 
+" as taken from Cream (http://cream.sf.net/) 
+
+
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "navajo-night"
+
+" This is the list of colour changes from Navajo that
+" weren't a simple mathematical subtraction from 0xffffff
+" DarkBlue -&gt; #ffff74
+" DarkRed -&gt; #74ffff 
+" DarkGreen -&gt; #ff9bff 
+" DarkCyan -&gt; #ff7474 
+" DarkMagenta -&gt; #74ff74 
+" DarkYellow -&gt; #7474ff 
+" DarkGray -&gt; #565656 
+" Blue -&gt; Yellow
+" Red -&gt; Cyan 
+" Yellow -&gt; Blue 
+" Gray -&gt; #414141 
+" Brown -&gt; #5ad5d5 
+" #ff8060 -&gt; #007f9f 
+" #f6e8d0 -&gt; #09172f 
+" #edb5cd -&gt; #124a32 
+" #c0c0c0 -&gt; #3f3f3f 
+" #907050 -&gt; #6f8faf 
+" #808080 -&gt; #7f7f7f
+" #707070 -&gt; #8f8f8f
+" SeaGreen -&gt; #d174a8 
+" LightRed (assuming #ee9090) -&gt; #116f6f 
+" LightBlue -&gt; #522719 
+
+hi Normal ctermfg=White guifg=White guibg=#35536f
+
+hi SpecialKey term=bold ctermfg=darkblue guifg=Yellow
+hi NonText term=bold ctermfg=darkblue cterm=bold gui=bold guifg=#7f7f7f
+hi Directory term=bold ctermfg=darkblue guifg=Yellow
+hi ErrorMsg term=standout ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi IncSearch term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=White ctermfg=Black cterm=reverse guibg=Black guifg=Yellow
+hi MoreMsg term=bold ctermfg=green gui=bold guifg=#d174a8
+hi ModeMsg term=bold cterm=bold gui=bold
+hi LineNr term=underline ctermfg=darkcyan ctermbg=grey guibg=#7f7f7f gui=bold guifg=White
+hi Question term=standout ctermfg=darkgreen gui=bold guifg=#d174a8
+hi StatusLine term=bold,reverse cterm=bold,reverse gui=bold guifg=Black guibg=White
+hi StatusLineNC term=reverse cterm=reverse gui=bold guifg=#116f6f guibg=#8f8f8f
+hi VertSplit term=reverse cterm=reverse gui=bold guifg=Black guibg=#8f8f8f
+hi Title term=bold ctermfg=green gui=bold guifg=#74ff74
+"+++ Cream:
+"hi Visual term=reverse cterm=reverse gui=reverse guifg=#3f3f3f guibg=White
+"+++
+hi VisualNOS term=bold,underline cterm=bold,underline gui=reverse guifg=#414141 guibg=Black
+hi WarningMsg term=standout ctermfg=darkred gui=bold guifg=Cyan
+hi WildMenu term=standout ctermfg=White ctermbg=darkyellow guifg=White guibg=Blue
+hi Folded term=standout ctermfg=darkblue ctermbg=grey guifg=White guibg=NONE guifg=#afcfef
+hi FoldColumn term=standout ctermfg=darkblue ctermbg=grey guifg=#ffff74 guibg=#3f3f3f
+hi DiffAdd term=bold ctermbg=darkblue guibg=Black
+hi DiffChange term=bold ctermbg=darkmagenta guibg=#124a32
+hi DiffDelete term=bold ctermfg=darkblue ctermbg=blue cterm=bold gui=bold guifg=#522719 guibg=#09172f
+hi DiffText term=reverse ctermbg=darkblue cterm=bold gui=bold guibg=#007f9f
+hi Cursor gui=reverse guifg=#bfbfef guibg=Black
+hi lCursor guifg=fg guibg=bg
+hi Match term=bold,reverse ctermbg=Blue ctermfg=Yellow cterm=bold,reverse gui=bold,reverse guifg=Blue guibg=Yellow
+
+
+" Colours for syntax highlighting
+hi Comment term=bold ctermfg=darkblue guifg=#e7e77f
+hi Constant term=underline ctermfg=darkred guifg=#3fffa7
+hi Special term=bold ctermfg=darkgreen guifg=#bfbfef
+hi Identifier term=underline ctermfg=darkcyan cterm=NONE guifg=#ef9f9f
+hi Statement term=bold ctermfg=darkred cterm=bold gui=bold guifg=#5ad5d5
+hi PreProc term=underline ctermfg=darkmagenta guifg=#74ff74
+hi Type term=underline ctermfg=green gui=bold guifg=#d174a8
+hi Ignore ctermfg=grey cterm=bold guifg=bg
+
+hi Error term=reverse ctermfg=grey ctermbg=darkred cterm=bold gui=bold guifg=Black guibg=Cyan
+hi Todo term=standout ctermfg=darkblue ctermbg=Blue guifg=Yellow guibg=Blue
+
+"+++ Cream: statusbar
+" Colours for statusbar
+"hi User1        gui=bold guifg=#565656  guibg=#0c0c0c
+"hi User2        gui=bold guifg=White     guibg=#0c0c0c
+"hi User3        gui=bold guifg=Yellow      guibg=#0c0c0c
+"hi User4        gui=bold guifg=Cyan       guibg=#0c0c0c
+highlight User1        gui=bold guifg=#999933  guibg=#45637f
+highlight User2        gui=bold guifg=#e7e77f     guibg=#45637f
+highlight User3        gui=bold guifg=Black      guibg=#45637f
+highlight User4        gui=bold guifg=#33cc99       guibg=#45637f
+"+++
+
+"+++ Cream: selection
+highlight Visual    gui=bold    guifg=Black guibg=#aacc77
+"+++
+
+"+++ Cream: bookmarks
+highlight Cream_ShowMarksHL ctermfg=blue ctermbg=lightblue cterm=bold guifg=Black guibg=#aacc77 gui=bold
+"+++
+
+"+++ Cream: spell check
+" Colour misspelt words
+"hi BadWord ctermfg=White ctermbg=darkred cterm=bold guifg=Yellow guibg=#522719 gui=bold
+" mathematically correct:
+"highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=White guibg=#003333
+" adjusted:
+highlight BadWord ctermfg=black ctermbg=lightblue gui=NONE guifg=#ff9999 guibg=#003333
+"+++
+
+</pre></div>
+</p><p class='vspace'></p>
+<h3>morning.vim</h3>
+<p><div class='codeblock'><pre>
+" Vim color file
+" Maintainer:	Bram Moolenaar &lt;Bram@vim.org&gt;
+" Last Change:	2001 May 21
+
+" This color scheme uses a light grey background.
+
+" First remove all existing highlighting.
+set background=light
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let colors_name = "morning"
+
+hi Normal ctermfg=Black ctermbg=LightGrey guifg=Black guibg=grey90
+
+" Groups used in the 'highlight' and 'guicursor' options default value.
+hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
+hi IncSearch term=reverse cterm=reverse gui=reverse
+hi ModeMsg term=bold cterm=bold gui=bold
+hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
+hi StatusLineNC term=reverse cterm=reverse gui=reverse
+hi VertSplit term=reverse cterm=reverse gui=reverse
+hi Visual term=reverse cterm=reverse gui=reverse guifg=Grey guibg=fg
+hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
+hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
+hi Cursor guibg=Green guifg=NONE
+hi lCursor guibg=Cyan guifg=NONE
+hi Directory term=bold ctermfg=DarkBlue guifg=Blue
+hi LineNr term=underline ctermfg=Brown guifg=Brown
+hi MoreMsg term=bold ctermfg=DarkGreen gui=bold guifg=SeaGreen
+hi NonText term=bold ctermfg=Blue gui=bold guifg=Blue guibg=grey80
+hi Question term=standout ctermfg=DarkGreen gui=bold guifg=SeaGreen
+hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Yellow guifg=NONE
+hi SpecialKey term=bold ctermfg=DarkBlue guifg=Blue
+hi Title term=bold ctermfg=DarkMagenta gui=bold guifg=Magenta
+hi WarningMsg term=standout ctermfg=DarkRed guifg=Red
+hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
+hi Folded term=standout ctermbg=Grey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
+hi FoldColumn term=standout ctermbg=Grey ctermfg=DarkBlue guibg=Grey guifg=DarkBlue
+hi DiffAdd term=bold ctermbg=LightBlue guibg=LightBlue
+hi DiffChange term=bold ctermbg=LightMagenta guibg=LightMagenta
+hi DiffDelete term=bold ctermfg=Blue ctermbg=LightCyan gui=bold guifg=Blue guibg=LightCyan
+
+" Colors for syntax highlighting
+hi Constant term=underline ctermfg=DarkRed guifg=Magenta guibg=grey95
+hi Special term=bold ctermfg=DarkMagenta guifg=SlateBlue guibg=grey95
+if &amp;t_Co &gt; 8
+  hi Statement term=bold cterm=bold ctermfg=Brown gui=bold guifg=Brown
+endif
+hi Ignore ctermfg=LightGrey guifg=grey90
+
+" vim: sw=2
+
+</pre></div>
+</p>
+</div>
+
+  <div id='printfoot'>
+    <div class='from'>Retrieved from http://kozgun.net/wiki/pmwiki.php?n=Vim.Colors</div>
+    <div class='lastmod'>Page last modified on April 02, 2008, at 04:33 PM</div></div>
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=Vim.Colors?action=print by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki2738.html?n=Vim.Colors?action=print by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>

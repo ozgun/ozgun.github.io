@@ -1,0 +1,312 @@
+<!DOCTYPE html 
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:19 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from kozgun.net/wiki/pmwiki50eb.html?n=SMTP.ServerResponseCodes?action=diff by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki | SMTP / ServerResponseCodes | History</title>
+  <meta http-equiv='Content-Style-Type' content='text/css' />
+  <link rel='stylesheet' href='pub/skins/pmwiki/pmwiki.css' type='text/css' />
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		_uacct = "UA-884922-1";
+		urchinTracker();
+	</script>
+
+  <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  
+div.sourceblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.sourceblock div {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }
+div.sourceblock div.head, div.sourceblock div.foot {
+	font: italic medium serif;
+	padding: 0.5em;
+}
+div.codeblock {
+	padding: 0.5em;
+	border: 1px solid #808080;
+	background-color: #F1F0ED; }
+div.codeblock pre {
+	font-family: monospace;
+	font-size: small;
+	line-height: 1; }.editconflict { color:green; font-style:italic; 
+  margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border: 2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  td.markup1 { border-bottom: 1px solid #ccf; }
+  div.faq { margin-left:2em; }
+  div.faq p.question { margin: 1em 0 0.75em -2em; font-weight:bold; }
+  div.faq hr { margin-left: -2em; }
+  
+  .diffbox { width:570px; border-left:1px #999999 solid; margin-top:1.33em; }
+  .diffauthor { font-weight:bold; }
+  .diffchangesum { font-weight:bold; }
+  .difftime { font-family:verdana,sans-serif; font-size:66%; 
+    background-color:#dddddd; }
+  .difftype { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; font-weight:bold; }
+  .diffadd { border-left:5px #99ff99 solid; padding-left:5px; }
+  .diffdel { border-left:5px #ffff99 solid; padding-left:5px; }
+  .diffrestore { clear:both; font-family:verdana,sans-serif; 
+    font-size:66%; margin:1.5em 0px; }
+  .diffmarkup { font-family:monospace; }  
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='noindex,nofollow' />
+
+</head>
+<body>
+<!--PageHeaderFmt-->
+  <div id='wikilogo'><a href='http://kozgun.net/wiki/pmwiki.php'><img src='http://kozgun.net/wiki/pub/skins/pmwiki/sopar100.jpg'
+    alt='Wiki' border='0' /></a></div>
+  <div id='wikihead'>
+	<!-- <span align=center style="position: relative; top:0px; left:-400px;"> -->
+<!-- SiteSearch Google -->
+<!--
+<form method="get" action="http://www.google.com.tr/custom" target="_top">
+<table border="0">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+</td>
+<td nowrap="nowrap">
+<input type="hidden" name="domains" value="linoz.blogspot.com;www.kozgun.net"></input>
+<input type="text" name="q" size="20" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="Search"></input>
+</td></tr>
+<tr>
+<td nowrap="nowrap" colspan=2>
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value="" checked="checked"></input>
+<font size="-1" color="#000000">Web</font>
+<input type="radio" name="sitesearch" value="linoz.blogspot.com"></input>
+<font size="-1" color="#000000">linoz.blogspot.com</font>
+<input type="radio" name="sitesearch" value="www.kozgun.net"></input>
+<font size="-1" color="#000000">www.kozgun.net</font>
+</td>
+  <td></td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-0891912819256381"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-9"></input>
+<input type="hidden" name="oe" value="ISO-8859-9"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1"></input>
+<input type="hidden" name="hl" value="en"></input>
+</td></tr></table>
+</form>
+-->
+<!-- SiteSearch Google -->
+	<!-- </span> -->
+
+	<span style="position: relative; top:0px; left:0px;">
+  <form action='http://kozgun.net/wiki/pmwiki.php'>
+    <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.RecentChanges'
+      accesskey='c'>Recent Changes</a> -
+    <input type='hidden' name='n' value='SMTP.ServerResponseCodes' />
+    <input type='hidden' name='action' value='search' />
+    <a href='http://kozgun.net/wiki/pmwiki.php?n=Site.Search'>Search</a>:
+    <input class='searchbox' type='text' name='q' value='' />
+    <input class='searchbutton' type='submit' value='Go' /></form></div>
+		</span>
+
+<!--/PageHeaderFmt-->
+  <table id='wikimid' width='100%' cellspacing='0' cellpadding='0'><tr>
+<!--PageLeftFmt-->
+      <td id='wikileft' valign='top'>
+        <ul><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=BirlerVeSifirlar.HomePage'>Birler ve S&#305;f&#305;rlar</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Radio.HomePage'>Radyo</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Bookmarks.Index'>Ba&#287;lant&#305;lar</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=RSS.HomePage'>RSS/Podcasts</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Main.Index'>Site Haritas&#305;</a>
+</li><li><a class='urllink' href='http://linoz.blogspot.com/' rel='nofollow'>linoz.blogspot.com</a>
+</li><li><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=NelerOgrendim.HomePage'>Neler Ö&#287;rendim</a>
+</li></ul><p style='text-align: right;' > <span style='font-size:83%'><a class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=Site.SideBar?action=edit'>edit SideBar</a></span>
+</p>
+
+			<div align="center">
+			<br>
+			<!-- firefox ve thunderbird -->
+			<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=209"><img border="0" alt="Firefox 2" title="Firefox 2" src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox2/firefox-spread-btn-1.png"/></a> 
+			<br>
+<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=181"><img border="0" alt="Get Thunderbird!" title="Get Thunderbird!" src="http://sfx-images.mozilla.org/affiliates/thunderbird/thunderbird_small.png"/></a>
+
+
+<br><br>
+				<script type="text/javascript"><!--
+				/*
+google_ad_client = "pub-0891912819256381";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+*/
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+				</td>
+<!--/PageLeftFmt-->
+      <td id='wikibody' valign='top'>
+        <!-- <div id='wikicmds'><ul><li class='browse' ><a accesskey='ak_view'  class='selflink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes'>View</a>
+</li><li class='edit' ><a accesskey='e'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=edit'>Edit</a>
+</li><li class='diff' ><a accesskey='h'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff'>History</a>
+</li><li class='print' ><a accesskey='ak_print'  class='wikilink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=print'>Print</a>
+</li></ul>
+</div>-->
+<!--PageTitleFmt-->
+        <div id='wikititle'>
+          <div class='pagegroup'><a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP'>SMTP</a> /</div>
+          <h1 class='pagetitle'>ServerResponseCodes</h1></div>
+<!--PageText-->
+<div id='wikitext'>
+<h2 class='wikiaction'>SMTP.ServerResponseCodes History</h2>
+  <p><a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff&amp;source=n&amp;minor=n'>Hide minor edits</a> - <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff&amp;source=y&amp;minor=y'>Show changes to markup</a></p>
+  <div id='wikidiff'>
+      <div class='diffbox'><div class='difftime'>September 03, 2005, at 06:04 PM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Changed lines 2-29 from:</div>
+        <div class='diffdel'><pre>    * 211 - A system status message.
+    * 214 - A help message for a human reader follows.
+    * 220 - SMTP Service ready.
+    * 221 - Service closing.
+    * 250 - Requested action taken and completed. The best message of them all.
+    * 251 - The recipient is not local to the server, but the server will accept and forward the message.
+    * 252 - The recipient cannot be <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>VRFYed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>?</a>, but the server accepts the message and attempts delivery. 
+
+    * 354 - Start message input and end with &lt;CRLF&gt;.&lt;CRLF&gt;. This indicates that the server is ready to accept the message itself (after you have told it who it is from and where you want to to go). 
+
+    * 421 - The service is not available and the connection will be closed.
+    * 450 - The requested command failed because the user's mailbox was unavailable (for example because it was locked). Try again later.
+    * 451 - The command has been aborted due to a server error. Not your fault. Maybe let the admin know.
+    * 452 - The command has been aborted because the server has insufficient system storage. 
+</pre><p class='vspace'></p><p>The following error messages (500-504) usually tell you that your email client is broken. It's probably best to let the program's author know.
+</p><p class='vspace'></p>
+<pre>    * 500 - The server could not recognize the command due to a syntax error.
+    * 501 - A syntax error was encountered in command arguments.
+    * 502 - This command is not implemented.
+    * 503 - The server has encountered a bad sequence of commands.
+    * 504 - A command parameter is not implemented. 
+
+    * 550 - The requested command failed because the user's mailbox was unavailable (for example because it was not found, or because the command was rejected for policy reasons).
+    * 551 - The recipient is not local to the server. The server then gives a forward address to try.
+    * 552 - The action was aborted due to exceeded storage allocation.
+    * 553 - The command was aborted because the mailbox name is invalid.
+    * 554 - The transaction failed. Blame it on the weather.
+</pre>
+</div>
+        <div class='difftype'>to:</div>
+        <div class='diffadd'><ul><li>211 - A system status message.
+</li><li>214 - A help message for a human reader follows.
+</li><li>220 - SMTP Service ready.
+</li><li>221 - Service closing.
+</li><li>250 - Requested action taken and completed. The best message of them all.
+</li><li>251 - The recipient is not local to the server, but the server will accept and forward the message.
+</li><li>252 - The recipient cannot be <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>VRFYed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>?</a>, but the server accepts the message and attempts delivery. 
+</li><li>354 - Start message input and end with. This indicates that the server is ready to accept the message itself (after you have told it who it is from and where you want to to go). 
+</li><li>421 - The service is not available and the connection will be closed.
+</li><li>450 - The requested command failed because the user's mailbox was unavailable (for example because it was locked). Try again later.
+</li><li>451 - The command has been aborted due to a server error. Not your fault. Maybe let the admin know.
+</li><li>452 - The command has been aborted because the server has insufficient system storage. 
+</li></ul><p class='vspace'></p><p><strong>The following error messages (500-504) usually tell you that your email client is broken. It's probably best to let the program's author know.</strong>
+</p><p class='vspace'></p>
+<ul><li>500 - The server could not recognize the command due to a syntax error.
+</li><li>501 - A syntax error was encountered in command arguments.
+</li><li>502 - This command is not implemented.
+</li><li>503 - The server has encountered a bad sequence of commands.
+</li><li>504 - A command parameter is not implemented. 
+</li><li>550 - The requested command failed because the user's mailbox was unavailable (for example because it was not found, or because the command was rejected for policy reasons).
+</li><li>551 - The recipient is not local to the server. The server then gives a forward address to try.
+</li><li>552 - The action was aborted due to exceeded storage allocation.
+</li><li>553 - The command was aborted because the mailbox name is invalid.
+</li><li>554 - The transaction failed. Blame it on the weather.
+</li></ul>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=edit&amp;restore=diff:1125759862:1125759761:&amp;preview=y'>Restore</a></div>
+      <div class='diffbox'><div class='difftime'>September 03, 2005, at 06:02 PM 
+        by <span class='diffauthor' title='127.0.0.1'>Özgün</span></div>
+        <div class='difftype'>Added lines 1-29:</div>
+        <div class='diffadd'><h3>SMTP Server Response Codes</h3>
+<pre>    * 211 - A system status message.
+    * 214 - A help message for a human reader follows.
+    * 220 - SMTP Service ready.
+    * 221 - Service closing.
+    * 250 - Requested action taken and completed. The best message of them all.
+    * 251 - The recipient is not local to the server, but the server will accept and forward the message.
+    * 252 - The recipient cannot be <a class='createlinktext' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>VRFYed</a><a 
+    class='createlink' href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.VRFYed?action=edit'>?</a>, but the server accepts the message and attempts delivery. 
+
+    * 354 - Start message input and end with &lt;CRLF&gt;.&lt;CRLF&gt;. This indicates that the server is ready to accept the message itself (after you have told it who it is from and where you want to to go). 
+
+    * 421 - The service is not available and the connection will be closed.
+    * 450 - The requested command failed because the user's mailbox was unavailable (for example because it was locked). Try again later.
+    * 451 - The command has been aborted due to a server error. Not your fault. Maybe let the admin know.
+    * 452 - The command has been aborted because the server has insufficient system storage. 
+</pre><p class='vspace'></p><p>The following error messages (500-504) usually tell you that your email client is broken. It's probably best to let the program's author know.
+</p><p class='vspace'></p>
+<pre>    * 500 - The server could not recognize the command due to a syntax error.
+    * 501 - A syntax error was encountered in command arguments.
+    * 502 - This command is not implemented.
+    * 503 - The server has encountered a bad sequence of commands.
+    * 504 - A command parameter is not implemented. 
+
+    * 550 - The requested command failed because the user's mailbox was unavailable (for example because it was not found, or because the command was rejected for policy reasons).
+    * 551 - The recipient is not local to the server. The server then gives a forward address to try.
+    * 552 - The action was aborted due to exceeded storage allocation.
+    * 553 - The command was aborted because the mailbox name is invalid.
+    * 554 - The transaction failed. Blame it on the weather. 
+</pre>
+</div></div>
+      <div class='diffrestore'><a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=edit&amp;restore=diff:1125759761:1125759761:&amp;preview=y'>Restore</a></div></div></div>
+
+      </td>
+    </tr></table>
+<!--PageFooterFmt-->
+  <div id='wikifoot'>
+    <div class='footnav'>
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=edit'>Edit</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff'>History</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=print' target='_blank'>Print</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=SMTP.RecentChanges'>Recent Changes</a> -
+      <a href='http://kozgun.net/wiki/pmwiki.php?n=Site.Search'>Search</a></div>
+    <div class='lastmod'>Page last modified on September 03, 2005, at 06:04 PM</div></div>
+<!--/PageFooterFmt-->
+</body>
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki.php?n=SMTP.ServerResponseCodes?action=diff by HTTrack Website Copier/3.x [XR&CO'2010], Sat, 26 Jan 2013 19:20:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+
+<!-- Mirrored from kozgun.net/wiki/pmwiki50eb.html?n=SMTP.ServerResponseCodes?action=diff by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Jun 2014 19:53:32 GMT -->
+</html>
