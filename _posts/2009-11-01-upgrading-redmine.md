@@ -65,7 +65,7 @@ $ ps -ef |grep fcgi
 $ kill -9 XXXX XXXX XXXX
 {% endhighlight %}
 
-Installing backlogs plugin:
+Installing [backlogs](http://github.com/relaxdiego/redmine_backlogs) plugin:
 
 {% highlight bash %}
 $ cd ~/redmine
@@ -88,12 +88,12 @@ Enable “backlogs” in your project’s setting tab.
 Your Project > Settings > Modules
 {% endhighlight %}
 
-Chart Data Generator: The author of the plugin says: “You may schedule a cron job to run the rake task named redmine:backlogs_plugin:generate_chart_data. I recommend you run it a few minutes after midnight to ensure that your backlogs have data everyday even when no user views the charts.”
+Chart Data Generator: The author of the plugin says: “You may schedule a cron job to run the rake task named `redmine:backlogs_plugin:generate_chart_data`. I recommend you run it a few minutes after midnight to ensure that your backlogs have data everyday even when no user views the charts.”
 
 {% highlight bash %}
 $ rake redmine:backlogs_plugin:generate_chart_data RAILS_ENV="production"
 {% endhighlight %}
 
-I’d like to thank to Mark Maglana for this great “Scrum/Agile” plugin.
+I’d like to thank to [Mark Maglana](http://relaxdiego.wordpress.com/) for this great "Scrum/Agile" plugin.
 
 Following the steps above, I successfully upgraded Redmine and installed “backlogs” plugin. If you encounter any problems please refer to "Redmine’s official documentation:http://www.redmine.org/projects/redmine/wiki
