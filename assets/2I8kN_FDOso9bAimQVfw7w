@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<meta name="title" content="Photo by Özgün Koyun"/>
+<meta name="description" content=""/>
+<meta name="medium" content="image"/>
+<link rel='image_src' href=""/>
+<title>Picasa Web Albums - Özgün Koyun</title>
+<link ref="SHORTCUT ICON" href="http://picasa.google.com/assets/picasa.ico" />
+<meta name="robots" content="noindex,nofollow">
+<base href="http://picasaweb.google.com/s/v/lighthousefe_20150712.00_p0/" />
+<!-- version:s/v/lighthousefe_20150712.00_p0 -->
+<script>
+/*
+*/
+var _clientStart = new Date().getTime();
+/**
+* Stores timing information from toolbar at the very beginning of the request.
+*/
+var _srt = -1;
+if (window.external && window.external.pageT) {
+_srt = window.external.pageT;
+}
+var _prt = -1;
+/**
+* Stores the serviceName for the particular frontend instance we are running
+*/
+var _serviceName = 'photos_html';
+var _P = {};
+function _tickPrt() {
+_prt = new Date().getTime();
+}
+function _start(m) {
+if (!_P[m]) {
+_P[m] = {s:0, t:0, c:0};
+}
+_P[m].s = new Date().getTime();
+_P[m].t -= _P[m].s;
+}
+function _mark(m, n) {
+if (!_P[n]) {
+_P[n] = {s:0, t:0, c:0};
+}
+_P[n].t += new Date().getTime() - _P[m].s;
+_P[n].c++;
+}
+function _stop(m) {
+_P[m].t += new Date().getTime();
+_P[m].c++;
+}
+function _report() {
+if (window.pwa && pwa.reportProfile) {
+pwa.reportProfile(_P,
+"113159780806762523554",
+"1438677092738000_175294260_654741625",
+true
+);
+}
+}
+</script>
+<!--[if IE]>
+<style type="text/css">
+.lhcl_menu .menu-item img {
+width: 24px;
+height: 24px;
+}
+#ctx_icon {
+width: 24px;
+height: 24px;
+}
+</style>
+<![endif]-->
+<script>
+var _picasaVersion = 0;
+var plugin = navigator.mimeTypes['application/x-picasa-detect'];
+if (plugin) {
+if (!plugin.description) {
+_picasaVersion = 2;
+} else {
+_picasaVersion = parseFloat(plugin.description);
+}
+}
+</script>
+<!--[if gte Picasa 2]>
+<script>_picasaVersion = 2;</script>
+<![endif]-->
+<!--[if gte Picasa 3]>
+<script>_picasaVersion = 3;</script>
+<![endif]-->
+<!--[if gte Picasa 3.1]>
+<script>_picasaVersion = 3.1;</script>
+<![endif]-->
+<img id="lhid_img_preload" style="display:none;" onload="_tickPrt()">
+<script>
+(function() {
+if (!'') {
+var mF = Math.floor,
+mM = Math.max,
+N = Number,
+dE = window.document.documentElement,
+aH = dE.clientHeight - 75 - 25 - 32 - 55;
+aW = dE.clientWidth - 296,
+imgHeight = N(),
+imgWidth = N(),
+aR = aW / aH,
+iR = N() / N(),
+s = iR > aR ? aW / N() :
+aH / N(),
+w = N() * s,
+h = N() * s,
+m = mF(mM(w, h));
+if (m) {
+var l = [512, 576, 640, 720, 800, 912, 1024, 1152, 1280, 1440, 1600];
+var i = 0,
+lS = l[i];
+while (m >= l[i] && i < l.length) {
+        lS = l[i++];
+      }
+      var r = lS / m;
+      w *= r;
+      h *= r;
+    }
+    w = mF(w);
+    h = mF(h);
+
+    s = '';
+    s = s.replace(/\/s\d+(?:-c)?\//, '/s' + mM(w, h) + '/');
+    window.document.getElementById('lhid_img_preload').src = s;
+  }
+})();
+</script>
+<script>
+var _features = {NEW_HOMEPAGE:1,fr:1,tags:1,search:1,globalsearch:1,globalsearchpromo:1,newfeatureslink:1,cart:1,contentcaching:1,developerlink:1,payments:1,newStrings:1,cccquota:1,signups:1,flashSlideshow:1,URL_SHORTENER_VISIBILITY:1,emailupload:1,photopickeralbumview:1,PWA_NEWUI:1,WILDCARD_QUERY_FEED:1,recentphotos:1,editinpicasa:1,imagesearch:1,froptin:1,FR_CONTINUOUS_CLUSTERING:1,asyncUploads:1,PERFORMANCE_EXPERIMENTS:1,BAKED_PRELOAD_FEEDS:1,albumviewlimit:1,HQ_VIDEOS:1,VIDEO_INFO_DISPLAY:1,CSI:1,EXPERIMENTAL_SEARCH_QUALITY:1,COMMENT_TRANSLATION:1,NEW_COMMENT_STYLE:1,ENABLE_NEW_FLAG_ABUSE_FORM:1,QRCODE:1,CHINA:1,GWS_URL_REDIRECTION:1,FEATURED_PHOTOS:1,COMMENT_SUBSCRIPTION:1,COMMENT_SUBSCRIPTION_SETTING:1,PICASA_MAC:1,API_AUTO_ACCOUNTS:1,FOCUS_GROUP_ACL:1,PHOTOSTREAM:1,BACKEND_ACL:1,ADVANCED_SEARCH:1,FACE_SEARCH:1,CAMERA_SEARCH:1,NOTIFICATION:1,PIXELATED_PREVIEW:1,TRANSPARENT_PIXELATED_PREVIEW:1,NEW_SETTINGS_PAGE:1,VIEW_STARRERS:1,FR_FOCUS_MERGE:1,GALLERY_COMMENTS:1,COMMENT_ABUSE_BLOCKING:1,FAVORITE_NOTIFICATION:1,IMAGE_ONLY_LINK:1,RECENT_PHOTOS_SLIDESHOW:1,HEART:1,SMALLER_IMAGE:1,FAST_SLIDESHOW:1,VIEW_CONTACTS:1,COLLABORATIVE_ALBUMS:1,PRINT_MARKETPLACE:1,PRINT_MARKETPLACE_REPLACEMENT:1,VIEW_COUNT:1,POST_TO:1,GAPLUS:1,PICASA_PROMO:1,PRODUCTION:1,NOSCRIPT:1,UNLISTED_GALLERY:1,GA_TRACKING:1,UNLIMITED_GALLERY:1,PICNIK_EDIT:1,MICROSCOPE_ZOOM:1,FR_V2:1,FAVORITE_SUGGESTION:1,FAVORITE_UPDATE:1,MERGED_PROFILES_SOFTLAUNCH:1,MERGED_PROFILES:1,MERGED_PROFILES_ASYNC:1,NEW_FR_UI:1,GAPLUS_UNMERGED_SOCIALIZATION:1,OPTOUT_ACL_NOTIFICATION:1,HTTPS_VISIBILITY:1,DEFAULT_HTTPS:1,EXTENDED_EXIF:1,ONEPICK:1,PER_ALBUM_GEO_VISIBILITY:1,SHAREBOX_VISIBILITY:1,AUTO_DOWNSIZE:1,PROFILE_NAME_CHECK:1,COLLABORATIVE_NAMETAGS:1,NOT_FOUND_404:1,REDIRECT_TO_PLUS:1,DISABLE_POST_SERVLET_DELETE_SHAPES:1,DISABLE_POST_SERVLET_DELETE_NAMETAGS:1,LOCATION_EXTRACTION_SERVICE:1,REDIRECT_GPLUS_CANONICAL_UNLISTED:1,CLIENT_ASYNC_THUMBNAILS_PERCENTAGE:1,POST_HANDLER_CREATE_SUBJECT_VISIBILITY:1,CLIENT_ASYNC_FACE_DETECT_PERCENTAGE:1,GDATA_EVENTS_VISIBILITY:1,ALBUM_COVER_DIALOG:1,AUTO_SEGMENT_COPY_PHOTOS:1,GALLERY_SHIFT_PERCENTAGE_ENABLED:1,AUTO_UNLISTED_ALBUM_ON_EMAIL_SHARE:1,API_SMALL_IU_AUTO_WRAPPING_VISIBILITY:1,API_FILTER_IU_ACTIVE_ALBUM:1,API_FILTER_GDRIVE_ALBUM_ENABLED:1,IU_REBRAND_ENABLED:1,SWF_STATIC_SERVING_VISIBILITY:1,EDIT_IN_GOOGLE_PLUS:1,USER_SETTINGS_FILTER_CACHE:1,DISABLE_POPULAR_CANONICAL_PAGES:1,GAIA_FILTER_2_ENABLED:1,ONEPICK_GAPI_IFRAMES:1,SIGN_FIFE_URLS:1};</script>
+<script>
+var pwa = {};
+pwa.paths = {
+selectedPhotos: '/lh/selectedPhotos?tok=',
+staticRoot: 'http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/',
+script: 'http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/script/',
+staticimagepath: 'http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/img/',
+transparentgif: 'http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/img/transparent.gif',
+hosturl: 'picasaweb.google.com',
+policyUrl: 'http://picasa.google.com/intl/en_us/policy.html',
+loginUrl: 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FServiceLogin?hl=en_US\x26amp\x3Bcontinue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252Flh%252Fphoto%252F2I8kN_FDOso9bAimQVfw7w\x26amp\x3Bservice=lh2\x26amp\x3Bltmpl=gp\x26amp\x3Bpassive=true',
+signupUrl: 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FNewAccount?hl=en_US\x26amp\x3Bcontinue=https%3A%2F%2Fpicasaweb.google.com%2F\x26amp\x3Bpassive=true\x26amp\x3Bservice=lh2',
+staticdomains: ['http://www.gstatic.com/pwa']
+};
+var _copyOrMovePath = '';
+var _createAlbumPath = '/lh/createAlbum?tok=';
+var _loginUrl = 'https://www.google.com/accounts/ServiceLogin?hl=en_US&continue=https%3A%2F%2Fpicasaweb.google.com&passive=true';
+var _signUpUrl = 'https://www.google.com/accounts/NewAccount?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2F&amp;passive=true&amp;service=lh2';
+var _activateUrl = 'https://www.google.com/accounts/NewAccount?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252Flh%252Fphoto%252F2I8kN_FDOso9bAimQVfw7w&amp;passive=true&amp;service=lh2';
+var _updatePhotoPath = '';
+var _addCommentPath = '';
+var _reorderPath = '';
+var _selectedPhotosPath = '/lh/selectedPhotos?tok=';
+var _selectedCommentsPath = '';
+var _setLicensePath = '';
+var _updateCartPath = '';
+var _geocodePath = '';
+var _batchUpdateGeoPath = '';
+</script>
+<script>
+var _c = true;
+var _LH = {
+locale:'en_US',
+calDay:0
+};
+</script>
+<script>_start("onload/prt/client\\JS parse/jsparse");</script>
+<style type="text/css">#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/styles/lh.css" />
+<script>
+var _authuser = {name:'',cannotSocialize:1
+,'showGeo': 0
+};
+var _user = {name:'113159780806762523554',nickname:'Özgün Koyun',portrait:'http:\x2F\x2Flh3.googleusercontent.com\x2F--3xx1rtUjrY\x2FAAAAAAAAAAI\x2FAAAAAAAAAg0\x2FrJTRqWynDQY\x2Fs32-c-Ic42\x2F113159780806762523554.jpg',link:'https:\x2F\x2Fpicasaweb.google.com\x2F113159780806762523554',defaultalbumnametagsvisibility:''
+,isnewstorageuser:false,isProfileUser:1};
+var _album = {id:'',link:'',name:'',title:'',titleshort:'',kmlLink:'',mapLink:'',showGeo:0};
+</script>
+</head>
+<body onload="_report();_onload();"
+  class="lhcl_lang_en_US goog-app lhcl_googlephotos_body">
+<script>(function() {
+var t = '';
+var u = 'http:\x2F\x2Fplus.google.com\x2Fphotos\x2F113159780806762523554\x2Fphoto\x2F5257334880063609362?banner=pwa\x26gpsrc=pwrd1';
+var h = window.location.hash;
+if (/^#(\d+)$/.test(h)) {
+t = h.replace('#', '/');
+}
+u = u.replace('{/photoid}', t);
+window.location.replace(u);
+})();
+</script>
+<script src="http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/script/lh_cview.js"></script>
+<script>
+var _jsTime = new Date().getTime();
+pwa.mapSetup('en_US');
+pwa.loggerSetup('\x2Flh\x2Fajaxlog',
+'');
+</script>
+<script>_stop("onload/prt/client\\JS parse/jsparse");</script>
+<div style="background: #ffffff;">
+<script></script>
+<div id=gbar><nobr><a target=_blank class=gb1 href="https://www.google.com.tr/webhp?tab=qw">Search</a> <a target=_blank class=gb1 href="http://www.google.com.tr/imghp?hl=en&tab=qi">Images</a> <a target=_blank class=gb1 href="https://play.google.com/?hl=en&tab=q8">Play</a> <a target=_blank class=gb1 href="http://www.youtube.com/?tab=q1">YouTube</a> <a target=_blank class=gb1 href="https://mail.google.com/mail/?tab=qm">Gmail</a> <a target=_blank class=gb1 href="https://drive.google.com/?tab=qo">Drive</a> <a target=_blank class=gb1 href="https://www.google.com/calendar?tab=qc">Calendar</a> <a target=_blank class=gb1 href="http://translate.google.com.tr/?hl=en&tab=qT">Translate</a> <a target=_blank class=gb1 style="text-decoration:none" href="http://www.google.com.tr/intl/en/options/"><u>More</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf><b><a  href="http://picasa.google.com/support/bin/answer.py?answer=148623&hl=en_US" class=gb4>New Features</a></b> | </span><span id=gbe></span><a target=_blank  href="http://picasa.google.com/support?hl=en_US" class=gb4>Help</a> | <a target=_top id=gb_70 href="https://www.google.com/accounts/ServiceLogin?hl=en_US&continue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252Flh%252Fphoto%252F2I8kN_FDOso9bAimQVfw7w&service=lh2&ltmpl=gp&passive=true" class=gb4>Sign in</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div>
+<script>
+if (window.pwa && pwa.initTimer) {
+pwa.initTimer(_P,
+[{n:'request',t:221,c:[{n:'filter',t:49,c:[{n:'SslRedirectFilter',t:0,c:[],m:[]},{n:'HostnameRedirectFilter',t:0,c:[],m:[]},{n:'SecurityContextFilter',t:0,c:[],m:[]},{n:'ApplicationContextFilter',t:1,c:[],m:[]},{n:'AlbumHashTokenCodec',t:0,c:[],m:[]},{n:'GAPlusRestrictionFilter',t:0,c:[],m:[]},{n:'MobileLoginInterceptFilter',t:0,c:[],m:[]},{n:'SessionStickinessFilter',t:0,c:[],m:[]},{n:'RequestInfoFilter',t:0,c:[],m:[]},{n:'UserContextFilter',t:12,c:[{n:'getServiceCookie',t:0,c:[],m:[]},{n:'getVerifiedSessionCookie',t:0,c:[],m:[]},],m:[{n:'lookupUserById',t:'GAIA',m:1},]},{n:'GusiTokenCodec',t:0,c:[],m:[]},{n:'TokenAuthorizationFilter - tok',t:0,c:[],m:[]},{n:'MobileRedirectFilter',t:0,c:[],m:[]},{n:'UserSettingsFilter',t:34,c:[],m:[]},{n:'RandomTokenFilter',t:0,c:[],m:[]},{n:'ExperimentLoggingFilter',t:0,c:[],m:[]},{n:'AuthorizationEnforcementFilter',t:0,c:[],m:[]},{n:'GaiaCacheCorrectionFilter',t:0,c:[],m:[]},{n:'GupiTokenCodec',t:2,c:[],m:[{n:'lookupUserById',t:'GAIA',m:2},]},{n:'PlusPageAuthorizationFilter',t:0,c:[],m:[]},{n:'GaiaMintFilter',t:0,c:[],m:[]},{n:'SelectedPersonaEnforcementFilter',t:0,c:[],m:[]},],m:[]},{n:'servlet',t:172,c:[{n:'CanonicalViewPhotoServlet',t:0,c:[],m:[]},],m:[]},],m:[]}],
+'CanonicalViewPhoto',
+_clientStart,
+false,
+false
+);
+}
+</script>
+</div>
+<script type="text/javascript">
+if (!_c) document.write('<div class="lhcl_browserwarning">You are using a browser that is not fully supported. Some features may not work too well, but you are welcome to have a look around.<\/div>');
+</script>
+<noscript>
+<div class="lhcl_browserwarning">You are using a browser that is not fully supported. Some features may not work too well, but you are welcome to have a look around.</div>
+</noscript>
+<table cellspacing="0" cellpadding="0" class="gphoto-topnav">
+<tbody>
+<tr>
+<td class="gphoto-logo" valign="bottom">
+<div>
+<a href="/">
+<img src="http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/img/logo/pwa-en_US.gif" id="lhid_logo" alt="Picasa Web Albums" /></a>
+</div>
+</td>
+<td class="gphoto-topnav-tab" valign="bottom" nowrap>
+<div class="gphoto-topnav-tab-inactive">
+<div class="gphoto-topnav-contents">
+<div class="gphoto-notch"><i>&nbsp;</i><b>&nbsp;</b></div>
+<a href="/lh/explore" >Explore</a>
+</div>
+</div>
+</td>
+<td class="gphoto-topnav-tab" valign="bottom" nowrap>
+<div class="gphoto-topnav-tab-active">
+<div class="gphoto-topnav-contents">
+<div class="gphoto-notch"><i>&nbsp;</i><b>&nbsp;</b></div>
+<a href="https://picasaweb.google.com/113159780806762523554" >Özgün Koyun's Gallery</a>
+</div>
+</div>
+</td>
+<td width="100%">&nbsp;</td>
+<td align="right" valign="bottom" nowrap>
+<div class="gphoto-searchbox-inactive">
+<form id="lhid_search_form" name="search_form" action="/lh/view" method="get">
+<input id="lhid_searchbox" name="q" type="text" size="25" maxlength="128" value="" />
+<input type="submit" class="gphoto-searchphotos-button" value="Search"/>
+<input id="lhid_search_uname" type="hidden" name="uname" value="113159780806762523554"/>
+<input id="lhid_psc" type="hidden" name="psc" value="G" />
+<input
+      id="lhid_cuname" type="hidden" name="cuname" value="113159780806762523554" />
+<input id="lhid_crowdfilter" name="filter" type="hidden" value="1" />
+</form>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="lhid_feedback" class="lhcl_gpfeedback" style="display:none">
+<center>
+<span class="lhcl_alertMessage">
+<span id="lhid_notifyMsg" class="lhcl_notifyMessage">
+</span>
+</span>
+</center>
+</div>
+<table id="lhid_tablecontent" class="lhcl_contentarea" style="width:100%;" cellspacing="0" cellpadding="0"><tr><td class="lhcl_content">
+<table class="gphoto-canonicaltools"><tr>
+<td><div id="lhid_canonicaltoolbar"></div></td>
+<td><div id="lhid_canonicalphotooperations"></div></td>
+</tr><tr><td id="lhid_zoomtd" colspan=2><div id="lhid_zoom" style="display:none;"></div></td>
+</tr></table>
+<div class="lhcl_feedview" id="lhid_feedview">
+<div id="lhid_content">
+<noscript>
+<div class="gphoto-canonicalscaledimage gphoto-photocaption">
+<img src="" alt="" width="" height="">
+<p></p>
+<p></p>
+<p><a href=""></a> </p>
+</div>
+</noscript>
+<div id="lhid_canonicalscaledimage" class="gphoto-canonicalscaledimage">
+<img id="lhid_canonicalscaledimage_image">
+</div>
+</div>
+<div id="lhid_caption" class="gphoto-photocaption"></div>
+<div id="lhid_popularityinfo"></div>
+<div id="lhid_comments"></div>
+</div>
+</td>
+<td id="lhid_trayhandle" class="gphoto-trayhandle gphoto-collapsibletrayhandle">
+<img src="http://www.gstatic.com/pwa/s/v/lighthousefe_20150712.00_p0/img/transparent.gif" class="" id="lhid_trayhandle_icon" />
+</td>
+<td id="lhid_tray" class="lhcl_tray" style="vertical-align:top;">
+<div class="lhcl_sidebox" id="lhid_hostbox">
+<table class="lhcl_host">
+<tr>
+<td class="lhcl_column_left">
+<a id="lhid_portraitlink"
+              href="https://picasaweb.google.com/113159780806762523554">
+<img class="lhcl_portrait" id="lhcl_portrait_id"
+                     src="http://lh3.googleusercontent.com/--3xx1rtUjrY/AAAAAAAAAAI/AAAAAAAAAg0/rJTRqWynDQY/s32-c-Ic42/113159780806762523554.jpg"
+                     width="32"
+                     height="32" />
+</a>
+</td>
+<td class="lhcl_column_right">
+<div class="lhcl_name" id="lhid_user_nickname">
+<a href="http://profiles.google.com/113159780806762523554" rel="author" rel="me">Özgün Koyun</a><br/><a href="https://picasaweb.google.com/113159780806762523554">photos</a>
+</div>
+</td>
+</tr>
+</table>
+<div id="lhid_album_title" style="display:none">
+</div>
+</div>
+</td>
+</tr></table>
+<script>
+(function() {
+var d = window.document;
+d.getElementById('lhid_canonicalscaledimage_image').src = d.getElementById('lhid_img_preload').src;
+})();
+</script>
+
+<script>
+pwa.setup(pwa.canonicalviewphoto,
+'113159780806762523554',
+'Özgün Koyun',
+'',
+'',
+'',
+'',
+'',
+false,
+'',
+{'preload': {"encoding":"UTF-8","feed":{"gd$kind":"photos#photo","id":"http://picasaweb.google.com/data/feed/user/113159780806762523554/photoid/5257334880063609362","title":"dsc03079_1024.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"http://picasaweb.google.com/data/feed/tiny/user/113159780806762523554/photoid/5257334880063609362?alt=jsonm&gupi=2I8kN_FDOso9bAimQVfw7w"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/lh/photo/2I8kN_FDOso9bAimQVfw79MTjNZETYmyPJy0liipFm0"}],"author":[{"type":"owner","name":"Özgün Koyun","uri":"https://picasaweb.google.com/113159780806762523554","email":"113159780806762523554","nickname":"Özgün Koyun","thumbnail":"http://lh3.googleusercontent.com/--3xx1rtUjrY/AAAAAAAAAAI/AAAAAAAAAg0/rJTRqWynDQY/s32-c-Ic42/113159780806762523554.jpg","user":"113159780806762523554","link":[{"rel":"http://schemas.google.com/photos/2007#userProfile","type":"text/html","href":"http://profiles.google.com/113159780806762523554"}]}],"totalResults":0,"gphoto$id":"5257334880063609362","albumId":"5221858274900560369","albumInfo":[{"id":"5221858274900560369","title":"Sopar","url":"https://picasaweb.google.com/lh/sredir?uname=113159780806762523554&target=ALBUM&id=5221858274900560369"}],"access":"public","width":"1024","height":"768","size":"481200","timestamp":"1215594738000","commentingEnabled":"true","allowNameTags":"false","cc":"ALL_RIGHTS_RESERVED","viewCount":"336","exif":{"fstop":"2.8","make":"SONY","model":"DSC-S650","exposure":"0.025","flash":"false","focalLength":"5.8","iso":"320","time":"1215594738000","imageUniqueId":"cf0663cc6395dde9aed8f848eadf3b8b"},"media":{"content":[{"url":"http://lh3.googleusercontent.com/-DqxMmcE4SpU/SPXOOAd2WhI/AAAAAAAAANc/7QjqRoHkA2I/Ic42/dsc03079_1024.jpg","height":384,"width":512,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"http://lh3.googleusercontent.com/-DqxMmcE4SpU/SPXOOAd2WhI/AAAAAAAAANc/7QjqRoHkA2I/d-Ic42/dsc03079_1024.jpg","height":768,"width":1024}],"title":"dsc03079_1024.jpg"},"allowPrints":"true","allowDownloads":"true","ccOverride":"false","htmlCaption":""}}},
+{'preload': null},
+'',
+'',
+'',
+'https://www.google.com/accounts/ServiceLogin?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252Flh%252Fphoto%252F2I8kN_FDOso9bAimQVfw7w&amp;service=lh2&amp;ltmpl=gp&amp;passive=true',
+'https://www.google.com/accounts/NewAccount?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2F&amp;passive=true&amp;service=lh2',
+'/lh/selectedPhotos?tok=',
+'',
+'',
+true,
+false,
+false,
+'http://plus.google.com/up/?type=st',
+'Google+',
+false,
+true);
+</script>
+<div id="lhid_footer">
+&copy;2011 Google&nbsp;
+<a href="https://www.google.com/intl/en_us/policies/terms/" target="_blank">Terms</a> -
+<span id="lhid_downloadpicasafooter" style="display:none">
+<a href="http://picasa.google.com/intl/en_us/" target="_blank">
+Download Picasa
+</a> - </span>
+<span id="lhid_launchpicasafooter" style="display:none">
+<a href="picasa://uploadtogoogle/">Launch Picasa</a> - </span>
+<script type="text/javascript">
+pwa.setup(pwa.footer, _picasaVersion,
+'http:\x2F\x2Fdl.google.com\x2Fdl\x2Fmac\x2Finstall\x2FInstallPicasaWebAlbumsUploaders.dmg');
+</script>
+<a href="https://www.google.com/intl/en_us/policies/privacy/" target="_blank">Privacy Policy</a> -
+<a href="http://code.google.com/apis/picasaweb/" target="_blank">Developer</a> -
+<a href="http://googlephotos.blogspot.com" target="_blank">Blog</a> -
+<a href="http://www.google.com" target="_blank">Google Home</a>
+</div>
+<script>
+pwa.setup(pwa.cart, 0, true);
+pwa.start();
+_tickPrt();
+</script>
+</body>
+</html>
