@@ -2,27 +2,44 @@
 layout: default
 ---
 <div id="post">
+
   <h2>{{ page.title }}</h2>
-  <div class="post-date">{{ page.date | date_to_string }}</div>
-  <div class="categories">
-    Categories: 
-    {% for tag in page.tags %}
+
+  <div class="center-block text-muted">
+
+    <span class="post-date">
+      <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span>
+      {{ page.date | date_to_string }}
+    </span>
+
+    <span class="categories">
+&nbsp;
+      <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+      {% for tag in page.tags %}
       <span>
         <a href="/tags/{{ tag }}">{{ tag }}</a>
       </span>
-    {% endfor %}
-  </div>
-  {{ content }}
-  <div>
-    <span>
-      Previous: <a href="{{ page.next.url }}">{{ page.next.title}}</a>
+      {% endfor %}
     </span>
-    <span>
-      Next: <a href="{{ page.previous.url }}">{{ page.previous.title}}</a>
-    </span>
+
   </div>
+
+  <p>{{ content }}</p>
+
+  <nav>
+    <ul class="pager">
+      <li>
+        <a href="{{ page.next.url }}"><span aria-hidden="true">&larr;</span> Newer</a>
+      </li>
+      <li>
+        <a href="{{ page.previous.url }}">Older <span aria-hidden="true">&rarr;</span></a>
+      </li>
+    </ul>
+  </nav>
+
 </div>
 
+<!--  
 <div id="related">
   <h2>Recent Posts</h2>
   <ul class="posts">
@@ -31,3 +48,4 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+-->

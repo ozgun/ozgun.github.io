@@ -4,8 +4,8 @@ layout: default
 ---
 
 <h2>Tags</h2>
-<ul class="tags">
+<ul class="list-group">
   {% for tag in site.tags %}
-    <li><a href="/tags/{{ tag | first }}">{{ tag | first }}</a></li>
+    <li class="list-group-item"><a href="/tags/{{ tag | first }}">{{ tag | first }}</a></li>
   {% endfor %}
 </ul>

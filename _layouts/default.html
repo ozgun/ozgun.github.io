@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Özgün Koyun - Web Application Developer - Ruby on Rails Developer">
+<meta name="author" content="Özgün Koyun" />
+
+<link rel="icon" href="/images/favicon.png">
+
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 <title>{{ page.title }}</title>
 
-<meta name="author" content="Özgün Koyun" />
-
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link rel="stylesheet" href="/assets/css/ie10-viewport-bug-workaround.css">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="/assets/css/jumbotron-narrow.css">
 
 <!-- syntax highlighting CSS -->
-<link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link rel="stylesheet" href="/assets/css/syntax.css" type="text/css" />
 
-<!-- cover template -->
-<!-- <link rel="stylesheet" href="/css/cover.css" type="text/css" /> -->
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/assets/css/custom.css">
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 
-<!-- Homepage CSS -->
-<!-- 
-<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
--->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </head>
+
 <body>
+
 <!-- Google Tag Manager(Includes Google Analytics) -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5KVGJC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -42,50 +55,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5KVGJC');</script>
 <!-- End Google Tag Manager -->
+
+<div class="container">
+
+  <div class="header clearfix">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/about.html">About</a></li>
+        <li role="presentation"><a href="/links.html">Links</a></li>
+        <li role="presentation"><a href="/wiki">Wiki</a></li>
+      </ul>
+    </nav>
+    <h3 class="text-muted">
+      <!-- 
+     <a class="navbar-brand" href="/" style="padding: 5px 5px">
+        <img width="20px" height="20px" alt="Brand" src="/images/favicon.png">
+      </a>
+      -->
+      <img width="35px" height="35px" alt="Özgün Koyun" src="/assets/images/logo.png">
+      <a href="/" class="text-muted">Özgün Koyun</a>
+    </h3>
+  </div>
+
+  <div>
+    {{ content }}
+  </div>
+
+  <footer class="footer text-center">
+    <a href="/">kozgun.net</a> |
+    <a href="https://github.com/ozgun" target="_blank">Github</a> |
+    <a href="https://gist.github.com/ozgun" target="_blank">Gists</a> |
+    <a href="https://twitter.com/kozgun" target="_blank">Twitter</a>
+    <!-- <a href="#">RSS</a> -->
+  </footer>
+
+</div>
  
-<div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Özgün Koyun</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class"active"><a href="/">Home</a></li>
-                  <li><a href="/blog.html">Blog</a></li>
-                  <li><a href="/tags.html">Tags</a></li>
-                  <li><a href="/wiki">Wiki</a></li>
-                  <li><a href="https://gist.github.com/ozgun" target="_blank">Gists</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-  {{ content }}
-            <!-- 
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-
-            -->
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              Footer
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
 
 </body>
