@@ -1,8 +1,12 @@
+## Github
+
 Bu websitesi github pages'te yayınlanıyor.
 
 Adres: http://ozgun.github.io
 
+```
 $ git checkout -b gh-pages
+```
 
 "gh-pages" branch'i yayınlanıyor. master'da yapılan değişiklikler sitede
 yayınlanmıyor. Sitede değişiklik yapmak için aşağıdaki yol izlenmeli:
@@ -13,3 +17,13 @@ yayınlanmıyor. Sitede değişiklik yapmak için aşağıdaki yol izlenmeli:
 * gh-pages branch'ine geçilir: git co gh-pages
 * master branch bu branch'e merge edilir: git merge master 
 * gh-pages branch'i push edilir: git push -u origin gh-pages
+
+## Development
+
+### Run Server
+
+```
+$ bundle exec jekyll serve
+```
+
+Connect to server: http://0.0.0.0:4000/
