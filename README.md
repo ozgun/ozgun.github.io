@@ -1,6 +1,6 @@
 ## www.kozgun.net
 
-Bu websitesi Github pages'te yayınlanıyor.
+Bu websitesi Github Pages'te yayınlanıyor.
 
 * Repo Adresi: https://github.com/ozgun/ozgun.github.io/
 * Web Sitesi Adresleri:
