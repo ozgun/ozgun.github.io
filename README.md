@@ -1,4 +1,4 @@
-## Github
+## www.kozgun.net
 
 Bu websitesi github pages'te yayınlanıyor.
 
