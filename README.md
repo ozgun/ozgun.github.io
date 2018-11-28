@@ -9,8 +9,8 @@ Bu websitesi Github pages'te yayınlanıyor.
 
 ## Deploy
 
-`master` brahch'te yapılan değişiklikler push edildikten birkaç dakika sonra
-sunucunun otomatik olarak güncellenmesi gerekiyor.
+`master` brahch'e push edildikten birkaç dakika sonra web/uygulama sunucunun
+otomatik olarak güncellenmesi gerekiyor.
 
 ## Development
 
