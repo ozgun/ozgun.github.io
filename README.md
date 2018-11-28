@@ -1,6 +1,6 @@
 ## www.kozgun.net
 
-Bu websitesi github pages'te yayınlanıyor.
+Bu websitesi Github pages'te yayınlanıyor.
 
 * Repo Adresi: https://github.com/ozgun/ozgun.github.io/
 * Web Sitesi Adresleri:
@@ -9,8 +9,8 @@ Bu websitesi github pages'te yayınlanıyor.
 
 ## Deploy
 
-`master` brahch'te yapilan degisiklikler push edildikten birkac dakika sonra
-sunucunun otomatik olarak guncellenmesi gerekiyor.
+`master` brahch'te yapılan değişiklikler push edildikten birkaç dakika sonra
+sunucunun otomatik olarak güncellenmesi gerekiyor.
 
 ## Development
 
