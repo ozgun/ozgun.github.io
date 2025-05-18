@@ -19,6 +19,8 @@ otomatik olarak güncellenmesi gerekiyor.
 
 ## Development
 
+I need to set up a development environment! As of 2025-05-18, the following command doesn't work.
+
 ```
 $ bundle exec jekyll serve
 ```
