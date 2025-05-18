@@ -4,11 +4,12 @@ tags: ruby
 layout: post
 ---
 
-It’s good to follow Ruby convetions while writing Ruby programs. In this short tutorial I will a cover a few rules about naming variables, methods, classes and modules in Ruby.
+It’s good to follow Ruby convetions when writing Ruby programs. In this short post, I'll
+cover a few rules about naming variables, methods, classes and modules in Ruby.
 
 ### Global Variables
 
-Golabal variables in Ruby start with a dollar sign: `$`
+Golabal variables in Ruby start with a dollar(`$`) sign.
 
 {% highlight ruby %}
 $i_am_a_global_variable
@@ -17,7 +18,7 @@ $i_am_a_global_variable
 
 ### Class Variables
 
-Class variables are prefixed with two “at” signs: @@
+Class variables are prefixed with two "at(`@@`)" signs.
 
 {% highlight ruby %}
 @@i_am_a_class_variable
@@ -25,7 +26,7 @@ Class variables are prefixed with two “at” signs: @@
 
 ### Instance Variables
 
-Instance variable starts with an “at” sign: @
+Instance variable starts with an "at(`@`)" sign.
 
 {% highlight ruby %}
 @i_am_an_instance_variable
@@ -61,7 +62,7 @@ class ReadOnlyAssociation
 end
 {% endhighlight %}
 
-###  Module Names:
+###  Module Names
 
 Module names start with an uppercase letter like class names.
 
@@ -74,11 +75,11 @@ module ActiveRecord
 end
 {% endhighlight %}
 
-### Method names and parameters 
+### Method Names and Method Parameters 
 
-In Ruby, method names and parameters should start with smallcase letter. If
-method name or parameters has includes than one words, you should separate them
-using underscores.
+In Ruby, method names and parameters should start with a lowercase letter.
+If a method name or parameter includes more than one word, you should separate the words using
+underscores.
 
 
 {% highlight ruby %}

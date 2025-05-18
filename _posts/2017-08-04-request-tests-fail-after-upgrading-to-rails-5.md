@@ -4,16 +4,13 @@ tags: rails
 layout: post
 ---
 
-Before Rails 5, I used to write "request specs" using rspec as below:
+Before Rails 5, I used to write "request specs" using RSpec as below:
 
 {% highlight ruby %}
 
 describe Api::Apps::Show do
-
   describe 'GET /api/apps/:id' do
-
     it 'responds with 200' do
-
       headers = { 
         'Authorization' => "Bearer #{auth_token}",  
         "Content-Type" => "application/vnd.api+json",
@@ -23,9 +20,7 @@ describe Api::Apps::Show do
       get url, nil, headers
       expect(response.status).to eq(200)
     end
-
   end
-
 end
 
 {% endhighlight %}
@@ -50,4 +45,4 @@ Replacing the `get` method call in the spec code as below solved the problem:
 get url, params: nil, headers: headers
 {% endhighlight %}
 
-See this [stackoverflow post](https://stackoverflow.com/questions/18289152/what-does-a-double-splat-operator-do) how to use splat and double splat.
+Also, see this [stackoverflow post](https://stackoverflow.com/questions/18289152/what-does-a-double-splat-operator-do) how to use splat and double splat.
