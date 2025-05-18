@@ -24,3 +24,7 @@ $ bundle exec jekyll serve
 ```
 
 Development URL: http://0.0.0.0:4000/
+
+## Google Analytics
+
+- https://analytics.google.com/analytics/web/#/p311642565/reports/intelligenthome
