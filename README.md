@@ -2,10 +2,15 @@
 
 Bu websitesi Github Pages'te yayınlanıyor.
 
-* Repo Adresi: https://github.com/ozgun/ozgun.github.io/
-* Web Sitesi Adresleri:
-  * http://ozgun.github.io
-  * http://www.kozgun.net
+- Repo Adresi: https://github.com/ozgun/ozgun.github.io/
+- Web Sitesi Adresleri:
+  - http://ozgun.github.io
+  - http://www.kozgun.net
+
+## How to add a new post
+
+- Create a Markdown file in the `_posts` directory following the naming convention
+`YYYY-MM-DD-title.md`.
 
 ## Deploy
 
